@@ -37,7 +37,8 @@ body {
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
@@ -63,8 +64,10 @@ select {
   *,
 *::before,
 *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -125,6 +128,13 @@ select {
   --main-text-bold: "main-text-bold";
   --menu-items: "menu-items";
   --main-text-link: "main-text-link";
+  /** PADDING **/
+  --padding-xs: 0.3rem;
+  --padding-s: 1rem;
+  --padding-m: 2rem;
+  --padding-l: 3rem;
+  /** BOX SHADOW **/
+  --default-box-shadow: 0 0 8px rgba(0, 0, 0, 0.304);
 }
 
 /** UTILITY: Colors **/
@@ -198,6 +208,78 @@ select {
   color: var(--fg-highlight-dark-50);
 }
 
+.main-text-regular-20 {
+  font-family: var(--main-text-regular);
+  font-size: 20px;
+}
+
+.main-text-bold-12 {
+  font-family: var(--main-text-bold);
+  font-size: 12px;
+}
+
+.main-text-bold-16 {
+  font-family: var(--main-text-bold);
+  font-size: 16px;
+}
+
+.main-text-bold-20 {
+  font-family: var(--main-text-bold);
+  font-size: 20px;
+}
+
+.main-text-bold-24 {
+  font-family: var(--main-text-bold);
+  font-size: 24px;
+}
+
+.main-text-bold-22 {
+  font-family: var(--main-text-bold);
+  font-size: 22px;
+}
+
+.main-text-bold-28 {
+  font-family: var(--main-text-bold);
+  font-size: 28px;
+}
+
+.main-text-bold-34 {
+  font-family: var(--main-text-bold);
+  font-size: 34px;
+}
+
+.menu-items-120 {
+  font-family: var(--menu-items);
+  font-size: 120px;
+}
+
+.main-text-link-16 {
+  font-family: var(--main-text-link);
+  font-size: 16px;
+}
+
+/*! paddings */
+.padding-xs {
+  padding: var(--padding-xs);
+}
+
+.padding-s {
+  padding: var(--padding-s);
+}
+
+.padding-m {
+  padding: var(--padding-m);
+}
+
+.padding-l {
+  padding: var(--padding-l);
+}
+
+/*! box shadows */
+.default-box-shadow {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.304);
+}
+
 .h1 {
   font-family: "heading";
   font-size: 5.625rem;
@@ -244,6 +326,19 @@ select {
   height: 4rem;
 }
 
-/*! Molecules */ /*! Organisms */
+.Price {
+  display: inline-block;
+  line-height: 0px;
+  border-radius: 50%;
+}
+.Price .price-text {
+  display: inline-block;
+  padding-block: 48%;
+  margin-inline: 10px;
+}
+.Price .cents {
+  position: relative;
+  top: -8px;
+}
 
-/*# sourceMappingURL=main.css.map */
+/*! Molecules */ /*! Organisms *//*# sourceMappingURL=main.css.map */

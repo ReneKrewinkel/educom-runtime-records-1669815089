@@ -1,0 +1,16 @@
+.Price {
+  display: inline-block;
+  line-height: 0px;
+  border-radius: 50%;
+
+  .price-text {
+    display: inline-block;
+    padding-block: 48%;
+    margin-inline: 10px;
+  }
+
+  .cents {
+    position: relative;
+    top: -8px;
+  }
+}

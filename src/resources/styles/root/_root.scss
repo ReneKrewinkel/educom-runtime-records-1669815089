@@ -4,7 +4,7 @@
   @each $ct, $cd in $color-types {
     /*! #{$cd} */
     @each $style in $colors {
-      $type: map-get($style, 'type');
+      $type: map-get($style, "type");
       /*! #{$type} */
       $shades: rootColor($type, $ct, $style);
       @each $shade, $value in $shades {
@@ -18,6 +18,19 @@
     $type: map-get($entry, "type");
     $q: quote($type);
     //--#{$type}: '#{$type}';
-    --#{$type}: '#{$q}';
+    --#{$type}: "#{$q}";
+  }
+
+  /** PADDING **/
+
+  @each $size in map-get($paddings, "size") {
+    @each $key, $value in $size {
+      --padding-#{$key}: #{$value}rem;
+    }
+  }
+
+  /** BOX SHADOW **/
+  @each $key, $value in $boxShadows {
+    --#{$key}-box-shadow: #{$value};
   }
 }

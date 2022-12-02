@@ -1,7 +1,10 @@
-$unit: map-get($tokens, 'unit');
-$colors: map-get($tokens, 'colors');
-$fonts: map-get($tokens, 'fonts');
-$headings: map-get($tokens, 'headings');
+$unit: map-get($tokens, "unit");
+$colors: map-get($tokens, "colors");
+$fonts: map-get($tokens, "fonts");
+$headings: map-get($tokens, "headings");
+$paddings: map-get($tokens, "paddings");
+$fontSizes: map-get($tokens, "fontSizes");
+$boxShadows: map-get($tokens, "boxShadows");
 
 $color-types: "bg" "Background Color" "background-color",
-              "fg" "Foreground Color" "color";
+  "fg" "Foreground Color" "color";

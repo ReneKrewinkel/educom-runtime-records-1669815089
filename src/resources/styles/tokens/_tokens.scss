@@ -16,7 +16,7 @@ $tokens: (
   ), (
     type: main-text-bold,
     uri: '../fonts/rouna-bold-webfont',
-    sizes: (20)
+    sizes: (12, 16, 20, 24, 22, 28, 34)
   ), (
     type: menu-items,
     uri: '../fonts/rouna-bold-webfont',
@@ -43,9 +43,18 @@ $tokens: (
       h6: 22
     ))
   ),
-  spacing: (
-    small: 1,
-    medium: 2,
-    large: 3
+  paddings: (
+    size: ((
+      xs: 0.3
+    ), (
+      s: 1
+    ), (
+      m: 2
+    ), (
+      l: 3
+    ))
+  ),
+  boxShadows: (
+    default: 0 0 8px rgba(0, 0, 0, 0.304)
   )
 );

@@ -1,0 +1,38 @@
+import { useState, useEffect } from "react";
+import PropTypes from "prop-types";
+import { propTypes } from "react-bootstrap/esm/Image";
+
+/// TODO: Define props
+const Price = (props) => {
+  const price = props.amount.toFixed(2);
+  const array = price.split(".");
+  const euro = array[0];
+  const cents = array[1];
+
+  const euroSize =
+    props.size === "regular" ? "main-text-bold-28" : "main-text-bold-34";
+  const centsSize =
+    props.size === "regular" ? "main-text-bold-16" : "main-text-bold-22";
+
+  return (
+    <span
+      data-testid={props.testID}
+      className={`Price ${props.size} fg-highlight-light-50 bg-highlight default-box-shadow `}
+    >
+      <span className="price-text">
+        <span className={`euro ${euroSize}`}>{euro}</span>
+        <span className={`cents ${centsSize}`}>.{cents}</span>
+      </span>
+    </span>
+  );
+};
+
+const sizes = ["regular", "large"];
+
+Price.propTypes = {
+  testID: PropTypes.string,
+  size: PropTypes.oneOf(sizes),
+  amount: PropTypes.number,
+};
+
+export default Price;

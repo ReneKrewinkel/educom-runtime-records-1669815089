@@ -1,0 +1,7 @@
+/*! box shadows */
+
+@each $key, $value in $boxShadows {
+  .#{$key}-box-shadow {
+    box-shadow: #{$value};
+  }
+}

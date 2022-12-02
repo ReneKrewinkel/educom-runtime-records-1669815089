@@ -1,0 +1,9 @@
+/*! paddings */
+
+@each $size in map-get($paddings, "size") {
+  @each $key, $value in $size {
+    .padding-#{$key} {
+      padding: var(#{"--padding-" + $key});
+    }
+  }
+}

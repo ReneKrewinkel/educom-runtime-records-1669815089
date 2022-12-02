@@ -1,0 +1,9 @@
+@each $instant in $fonts {
+  $type: map-get($instant, "type");
+  @each $size in map-get($instant, "sizes") {
+    .#{$type}-#{$size} {
+      font-family: var(#{"--" + $type});
+      font-size: #{$size}px;
+    }
+  }
+}
