@@ -129,7 +129,7 @@ select {
   --menu-items: "menu-items";
   --main-text-link: "main-text-link";
   /** PADDING **/
-  --padding-xs: 0.3rem;
+  --padding-xs: 0.5rem;
   --padding-s: 1rem;
   --padding-m: 2rem;
   --padding-l: 3rem;
@@ -208,9 +208,39 @@ select {
   color: var(--fg-highlight-dark-50);
 }
 
+.main-text-regular-12 {
+  font-family: var(--main-text-regular);
+  font-size: 12px;
+}
+
+.main-text-regular-16 {
+  font-family: var(--main-text-regular);
+  font-size: 16px;
+}
+
 .main-text-regular-20 {
   font-family: var(--main-text-regular);
   font-size: 20px;
+}
+
+.main-text-regular-24 {
+  font-family: var(--main-text-regular);
+  font-size: 24px;
+}
+
+.main-text-regular-22 {
+  font-family: var(--main-text-regular);
+  font-size: 22px;
+}
+
+.main-text-regular-28 {
+  font-family: var(--main-text-regular);
+  font-size: 28px;
+}
+
+.main-text-regular-34 {
+  font-family: var(--main-text-regular);
+  font-size: 34px;
 }
 
 .main-text-bold-12 {
@@ -339,6 +369,12 @@ select {
 .Price .cents {
   position: relative;
   top: -8px;
+}
+
+.Shoppingcart {
+  display: inline-block;
+  line-height: 0px;
+  border-radius: 50%;
 }
 
 /*! Molecules */ /*! Organisms *//*# sourceMappingURL=main.css.map */

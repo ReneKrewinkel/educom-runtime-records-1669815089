@@ -10,9 +10,9 @@ const Price = (props) => {
   const cents = array[1];
 
   const euroSize =
-    props.size === "regular" ? "main-text-bold-28" : "main-text-bold-34";
+    props.size === "regular" ? "main-text-bold-20" : "main-text-bold-28";
   const centsSize =
-    props.size === "regular" ? "main-text-bold-16" : "main-text-bold-22";
+    props.size === "regular" ? "main-text-bold-12" : "main-text-bold-20";
 
   return (
     <span
