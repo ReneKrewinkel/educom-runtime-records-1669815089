@@ -382,4 +382,11 @@ select {
   border-radius: 50%;
 }
 
+.Button {
+  border-radius: 25px;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  letter-spacing: 1px;
+}
+
 /*! Molecules */ /*! Organisms *//*# sourceMappingURL=main.css.map */
