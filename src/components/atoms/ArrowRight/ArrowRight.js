@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
 
 /// TODO: Define props
-const Arrow_right = (props) => {
+const ArrowRight = (props) => {
   const fontSize =
     props.size === "small" ? "main-text-regular-24" : "main-text-regular-34";
   const color =
@@ -14,7 +14,7 @@ const Arrow_right = (props) => {
     <div
       data-testid={props.testID}
       data-object-type={props.type ?? ""}
-      className={`Arrow_right ${fontSize} ${color} `}
+      className={`ArrowRight ${fontSize} ${color} `}
     >
       <FontAwesomeIcon icon={faArrowRightLong} />
     </div>
@@ -24,10 +24,10 @@ const Arrow_right = (props) => {
 const sizes = ["small", "large"];
 const exceptionClasses = ["orange", "white"];
 
-Arrow_right.propTypes = {
+ArrowRight.propTypes = {
   testID: PropTypes.string,
   type: PropTypes.oneOf(exceptionClasses),
   size: PropTypes.oneOf(sizes),
 };
 
-export default Arrow_right;
+export default ArrowRight;
