@@ -27,5 +27,11 @@ BlackShoppingcart.args = {
   type: "black",
   size: "large",
 };
+export const WhiteShoppingcart = Template.bind({});
+WhiteShoppingcart.args = {
+  testID: testID,
+  type: "white",
+  size: "large",
+};
 
 export default ShoppingcartMeta;
