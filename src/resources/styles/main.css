@@ -7,8 +7,12 @@
 
 /* Remove default margin */
 body,
-h1, h2, h3,
-h4, h5, h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 p,
 figure,
 blockquote,
@@ -18,8 +22,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role=list],
-ol[role=list] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -38,7 +42,7 @@ body {
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
@@ -62,12 +66,12 @@ select {
     scroll-behavior: auto;
   }
   *,
-*::before,
-*::after {
+  *::before,
+  *::after {
     -webkit-animation-duration: 0.01ms !important;
-            animation-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
     -webkit-animation-iteration-count: 1 !important;
-            animation-iteration-count: 1 !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
@@ -76,27 +80,37 @@ select {
 /*! main-text-regular */
 @font-face {
   font-family: "main-text-regular";
-  src: url("../fonts/rouna-regular-webfont.woff2") format("woff2"), url("../fonts/rouna-regular-webfont.woff") format("woff"), url("../fonts/rouna-regular-webfont.ttf") format("tff");
+  src: url("../fonts/rouna-regular-webfont.woff2") format("woff2"),
+    url("../fonts/rouna-regular-webfont.woff") format("woff"),
+    url("../fonts/rouna-regular-webfont.ttf") format("tff");
 }
 /*! main-text-bold */
 @font-face {
   font-family: "main-text-bold";
-  src: url("../fonts/rouna-bold-webfont.woff2") format("woff2"), url("../fonts/rouna-bold-webfont.woff") format("woff"), url("../fonts/rouna-bold-webfont.ttf") format("tff");
+  src: url("../fonts/rouna-bold-webfont.woff2") format("woff2"),
+    url("../fonts/rouna-bold-webfont.woff") format("woff"),
+    url("../fonts/rouna-bold-webfont.ttf") format("tff");
 }
 /*! menu-items */
 @font-face {
   font-family: "menu-items";
-  src: url("../fonts/rouna-bold-webfont.woff2") format("woff2"), url("../fonts/rouna-bold-webfont.woff") format("woff"), url("../fonts/rouna-bold-webfont.ttf") format("tff");
+  src: url("../fonts/rouna-bold-webfont.woff2") format("woff2"),
+    url("../fonts/rouna-bold-webfont.woff") format("woff"),
+    url("../fonts/rouna-bold-webfont.ttf") format("tff");
 }
 /*! main-text-link */
 @font-face {
   font-family: "main-text-link";
-  src: url("../fonts/rouna-bold-webfont.woff2") format("woff2"), url("../fonts/rouna-bold-webfont.woff") format("woff"), url("../fonts/rouna-bold-webfont.ttf") format("tff");
+  src: url("../fonts/rouna-bold-webfont.woff2") format("woff2"),
+    url("../fonts/rouna-bold-webfont.woff") format("woff"),
+    url("../fonts/rouna-bold-webfont.ttf") format("tff");
 }
 /*! heading */
 @font-face {
   font-family: "heading";
-  src: url("../fonts/rouna-bold-webfont.woff2") format("woff2"), url("../fonts/rouna-bold-webfont.woff") format("woff"), url("../fonts/rouna-bold-webfont.ttf") format("tff");
+  src: url("../fonts/rouna-bold-webfont.woff2") format("woff2"),
+    url("../fonts/rouna-bold-webfont.woff") format("woff"),
+    url("../fonts/rouna-bold-webfont.ttf") format("tff");
 }
 /** CUSTOM PROPERTIES **/
 :root {
@@ -129,10 +143,10 @@ select {
   --menu-items: "menu-items";
   --main-text-link: "main-text-link";
   /** PADDING **/
-  --padding-xs: 0.5rem;
-  --padding-s: 1rem;
-  --padding-m: 2rem;
-  --padding-l: 3rem;
+  --padding-xs: 0.5em;
+  --padding-s: 1em;
+  --padding-m: 2em;
+  --padding-l: 3em;
   /** BOX SHADOW **/
   --default-box-shadow: 0 0 8px rgba(0, 0, 0, 0.304);
 }
@@ -377,4 +391,4 @@ select {
   border-radius: 50%;
 }
 
-/*! Molecules */ /*! Organisms *//*# sourceMappingURL=main.css.map */
+/*! Molecules */ /*! Organisms */ /*# sourceMappingURL=main.css.map */

@@ -25,7 +25,7 @@
 
   @each $size in map-get($paddings, "size") {
     @each $key, $value in $size {
-      --padding-#{$key}: #{$value}rem;
+      --padding-#{$key}: #{$value}em;
     }
   }
 

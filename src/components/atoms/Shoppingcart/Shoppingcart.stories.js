@@ -7,6 +7,7 @@ const ShoppingcartMeta = {
   argTypes: {
     testID: { table: { disable: true } },
     type: { name: "Type" },
+    size: { name: "Size" },
   },
 };
 
@@ -17,12 +18,14 @@ export const OrangeShoppingcart = Template.bind({});
 OrangeShoppingcart.args = {
   testID: testID,
   type: "orange",
+  size: "small",
 };
 
 export const BlackShoppingcart = Template.bind({});
 BlackShoppingcart.args = {
   testID: testID,
   type: "black",
+  size: "large",
 };
 
 export default ShoppingcartMeta;
