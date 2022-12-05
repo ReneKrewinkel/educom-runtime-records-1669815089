@@ -30,7 +30,9 @@
   }
 
   /** BOX SHADOW **/
-  @each $key, $value in $boxShadows {
-    --#{$key}-box-shadow: #{$value};
+  @each $shade in map-get($boxShadows, "shades") {
+    @each $key, $value in $shade {
+      --#{$key}-box-shadow: #{$value};
+    }
   }
 }
