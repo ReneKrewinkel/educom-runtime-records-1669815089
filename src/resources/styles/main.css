@@ -396,4 +396,14 @@ select {
      object-fit: cover;
 }
 
+.LogoIcon.small {
+  width: 3rem;
+}
+.LogoIcon.medium {
+  width: 5rem;
+}
+.LogoIcon.large {
+  width: 7rem;
+}
+
 /*! Molecules */ /*! Organisms *//*# sourceMappingURL=main.css.map */
