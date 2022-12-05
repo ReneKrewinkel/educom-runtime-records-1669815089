@@ -341,11 +341,6 @@ select {
 }
 
 /*! Atoms */
-.Label {
-  font-family: "main-text-regular", sans-serif;
-  padding: 10px;
-}
-
 .Logo .small {
   height: 1.2rem;
 }
