@@ -19,12 +19,7 @@ const LogoIcon = (props) => {
   );
 };
 
-/// TODO: add more utility classes if needed!
-
-/// TODO: Adjust and extend!
 const sizes = ["small", "medium", "large"];
-
-/// TODO: Adjust and extend
 const exceptionClasses = ["logo-icon-white", "logo-icon-black"];
 
 LogoIcon.propTypes = {

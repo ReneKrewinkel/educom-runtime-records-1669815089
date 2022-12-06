@@ -7,8 +7,7 @@ const InputMeta = {
   component: Input,
   argTypes: {
     testID: { table: { disable: true } },
-    size: { name: "Size" },
-    type: { name: "Type" },
+    additionalClasses: { name: "AdditionalClasses" },
     placeholder: { name: "Placeholder" },
   },
 };
@@ -19,8 +18,7 @@ const Template = (args) => <Input {...args} />;
 export const DefaultInput = Template.bind({});
 DefaultInput.args = {
   testID: testID,
-  size: "large",
-  type: "regular",
+  additionalClasses: ["light-box-shadow", "main-text-bold-28"],
   placeholder: "search",
 };
 

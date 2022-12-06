@@ -14,11 +14,10 @@ const Price = (props) => {
   const centsSize =
     props.size === "regular" ? "main-text-bold-12" : "main-text-bold-20";
 
+  const classes = ["Price", ...(props.additionalClasses || [])].join(" ");
+
   return (
-    <span
-      data-testid={props.testID}
-      className={`Price ${props.size} fg-highlight-light-50 bg-highlight default-box-shadow `}
-    >
+    <span data-testid={props.testID} className={classes}>
       <span className="price-text">
         <span className={`euro ${euroSize}`}>{euro}</span>
         <span className={`cents ${centsSize}`}>.{cents}</span>
@@ -28,11 +27,17 @@ const Price = (props) => {
 };
 
 const sizes = ["regular", "large"];
+const utilityClasses = [
+  "fg-highlight-light-50",
+  " bg-highlight ",
+  "default-box-shadow",
+];
 
 Price.propTypes = {
   testID: PropTypes.string,
   size: PropTypes.oneOf(sizes),
   amount: PropTypes.number,
+  additionalClasses: PropTypes.oneOf(utilityClasses),
 };
 
 export default Price;

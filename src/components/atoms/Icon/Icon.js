@@ -4,13 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 /// TODO: Define props
 const Icon = (props) => {
-  const fontSizes = [
-    { size: "xs", class: "main-text-regular-16" },
-    { size: "s", class: "main-text-regular-20" },
-    { size: "m", class: "main-text-regular-24" },
-    { size: "l", class: "main-text-regular-34" },
-  ];
-  const fontSize = fontSizes.find((size) => size.size == props.size).class;
+  const classes = ["Icon", ...(props.additionalClasses || [])].join(" ");
 
   let lineHeight = "";
   if (props.type === "item-count") {
@@ -20,7 +14,6 @@ const Icon = (props) => {
     }
   }
 
-  const textValue = props.textValue !== "" ? props.textValue : "";
   const iconValue =
     props.iconValue !== "" ? <FontAwesomeIcon icon={props.iconValue} /> : "";
 
@@ -28,39 +21,38 @@ const Icon = (props) => {
     <div
       data-testid={props.testID}
       data-object-type={props.type ?? ""}
-      className={`Icon ${props.type} ${props.bgColor} ${props.fgColor} ${fontSize} padding-xs`}
+      className={classes}
       style={{ lineHeight: `${lineHeight}em` }}
     >
       {iconValue}
-      {textValue}
+      {props.textValue ?? ""}
     </div>
   );
 };
 
 /// TODO: Adjust and extend
 const exceptionClasses = ["default-icon", "circle-icon", "item-count"];
-const sizes = ["xs", "s", "m", "l"];
 
-const bgColors = [
+const utilityClasses = [
   "bg-highlight-dark-50",
   "bg-highlight-light-50",
   "bg-highlight",
-  "none",
-];
-const fgColors = [
   "fg-highlight-dark-50",
   "fg-highlight-light-50",
   "fg-highlight",
   "fg-base-light-50",
+  "main-text-regular-16",
+  "main-text-regular-20",
+  "main-text-regular-24",
+  "main-text-regular-34",
+  "padding-xs",
 ];
 
 Icon.propTypes = {
   testID: PropTypes.string,
   type: PropTypes.oneOf(exceptionClasses),
-  size: PropTypes.oneOf(sizes),
+  additionalClasses: PropTypes.oneOf(utilityClasses),
   iconValue: PropTypes.string,
-  bgColor: PropTypes.oneOf(bgColors),
-  fgColor: PropTypes.oneOf(fgColors),
   textValue: PropTypes.number,
 };
 

@@ -1,17 +1,13 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
-/// TODO: Define props
 const Input = (props) => {
-  const fontSize = props.size === "large" ? "main-text-bold-28" : "";
+  const classes = ["Input", ...(props.additionalClasses || [])].join(" ");
+
   return (
-    <div
-      data-testid={props.testID}
-      data-object-type={props.type ?? ""}
-      className={` ${fontSize} `}
-    >
+    <div data-testid={props.testID}>
       <input
-        className="Input light-box-shadow "
+        className={classes}
         type="text"
         placeholder={props.placeholder}
       ></input>
@@ -19,16 +15,11 @@ const Input = (props) => {
   );
 };
 
-/// TODO: add more utility classes if needed!
-
-/// TODO: Adjust and extend!
-const sizes = ["large"];
-
-/// TODO: Adjust and extend
+const utilityClasses = ["main-text-bold-28", "light-box-shadow"];
 
 Input.propTypes = {
   testID: PropTypes.string,
-  size: PropTypes.oneOf(sizes),
+  additionalClasses: PropTypes.oneOf(utilityClasses),
   placeholder: PropTypes.string,
 };
 

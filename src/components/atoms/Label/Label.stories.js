@@ -7,12 +7,11 @@ const LabelMeta = {
   argTypes: {
     testID: { table: { disable: true } },
     additionalClasses: { name: "Utility Classes" },
+    text: { name: "Text" },
   },
 };
 
 const Template = (args) => <Label {...args} />;
-
-const DefaultText = "Default Label";
 
 export const SmallOrangeLabel = Template.bind({});
 SmallOrangeLabel.args = {

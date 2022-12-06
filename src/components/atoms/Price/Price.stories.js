@@ -8,6 +8,7 @@ const PriceMeta = {
     testID: { table: { disable: true } },
     size: { name: "Size" },
     amount: { name: "Amount" },
+    additionalClasses: { name: "AdditionalClasses" },
   },
 };
 
@@ -19,9 +20,23 @@ DefaultPrice.args = {
   testID: testID,
   size: "regular",
   amount: 22.5,
+  additionalClasses: [
+    "fg-highlight-light-50",
+    " bg-highlight ",
+    "default-box-shadow",
+  ],
 };
 
 export const LargerPrice = Template.bind({});
-LargerPrice.args = { testID: testID, size: "large", amount: 22.5 };
+LargerPrice.args = {
+  testID: testID,
+  size: "large",
+  amount: 22.5,
+  additionalClasses: [
+    "fg-highlight-light-50",
+    " bg-highlight ",
+    "default-box-shadow",
+  ],
+};
 
 export default PriceMeta;

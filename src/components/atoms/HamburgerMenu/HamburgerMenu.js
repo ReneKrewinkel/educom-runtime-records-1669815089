@@ -1,13 +1,12 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
-/// TODO: Define props
 const HamburgerMenu = (props) => {
   return (
     <div
       data-testid={props.testID}
       data-object-type={props.type ?? ""}
-      className={`HamburgerMenu  ${props.type}`}
+      className={"HamburgerMenu"}
     >
       <div className="bar1 bg-highlight-dark-50"></div>
       <div className="bar2 bg-highlight-dark-50"></div>

@@ -1,15 +1,12 @@
 .Icon {
-  &.circle-icon {
+  &[data-object-type="circle-icon"] {
     display: inline-block;
     line-height: 0px;
     border-radius: 50%;
   }
 
-  &.item-count {
+  &[data-object-type="item-count"] {
     display: inline-block;
     border-radius: 50%;
-  }
-
-  &.menu-open {
   }
 }

@@ -24,9 +24,8 @@ const Logo = (props) => {
   );
 };
 
-const sizes = ["small", "medium", "large"];
-
-const exceptionClasses = ["logo-black", "logo-white"];
+const sizes = ["small", "medium", "large", "extra-large"];
+const exceptionClasses = ["logo-black", "logo-white", "logo2"];
 
 Logo.propTypes = {
   testID: PropTypes.string,

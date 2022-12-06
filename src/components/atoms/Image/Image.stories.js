@@ -8,7 +8,7 @@ const ImageMeta = {
     testID: { table: { disable: true } },
     type: { name: "Type" },
     file: { name: "File" },
-    shadow: { name: "Shadow" },
+    additionalClasses: { name: "AdditionalClasses" },
   },
 };
 
@@ -20,7 +20,7 @@ DefaultImage.args = {
   testID: testID,
   type: "rounded",
   file: "mythic-sunship-another-shape-of-psychedelic-music.jpg",
-  shadow: true,
+  additionalClasses: ["light-box-shadow"],
 };
 
 export default ImageMeta;

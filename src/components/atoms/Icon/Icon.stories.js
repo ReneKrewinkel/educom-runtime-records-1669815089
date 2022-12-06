@@ -7,11 +7,10 @@ const IconMeta = {
   component: Icon,
   argTypes: {
     testID: { table: { disable: true } },
-    bgColor: { name: "BgColor" },
-    size: { name: "Size" },
     iconValue: { name: "IconValue" },
     type: { name: "Type" },
     textValue: { name: "TextValue" },
+    additionalClasses: { name: "AdditionalClasses" },
   },
 };
 
@@ -21,9 +20,12 @@ const Template = (args) => <Icon {...args} />;
 export const OrangeShoppingcartIcon = Template.bind({});
 OrangeShoppingcartIcon.args = {
   testID: testID,
-  bgColor: "bg-highlight",
-  fgColor: "fg-highlight-light-50",
-  size: "xs",
+  additionalClasses: [
+    "bg-highlight",
+    "fg-highlight-light-50",
+    "padding-xs",
+    "main-text-regular-16",
+  ],
   iconValue: "shopping-cart",
   type: "circle-icon",
 };
@@ -31,36 +33,48 @@ OrangeShoppingcartIcon.args = {
 export const BlackShoppingcartIcon = Template.bind({});
 BlackShoppingcartIcon.args = {
   testID: testID,
-  bgColor: "bg-highlight-dark-50",
-  fgColor: "fg-highlight-light-50",
-  size: "m",
+  additionalClasses: [
+    "bg-highlight-dark-50",
+    "fg-highlight-light-50",
+    "padding-xs",
+    "main-text-regular-24",
+  ],
   iconValue: "shopping-cart",
   type: "circle-icon",
 };
 export const WhiteShoppingcartIcon = Template.bind({});
 WhiteShoppingcartIcon.args = {
   testID: testID,
-  bgColor: "bg-highlight-light-50",
-  fgColor: "fg-highlight-dark-50",
-  size: "m",
+  additionalClasses: [
+    "bg-highlight-light-50",
+    "fg-highlight-dark-50",
+    "padding-xs",
+    "main-text-regular-24",
+  ],
   iconValue: "shopping-cart",
   type: "circle-icon",
 };
 export const SaveIcon = Template.bind({});
 SaveIcon.args = {
   testID: testID,
-  bgColor: "bg-highlight-dark-50",
-  fgColor: "fg-highlight-light-50",
-  size: "m",
+  additionalClasses: [
+    "bg-highlight-dark-50",
+    "fg-highlight-light-50",
+    "padding-xs",
+    "main-text-regular-24",
+  ],
   iconValue: "floppy-disk",
   type: "circle-icon",
 };
 export const SpotifyIcon = Template.bind({});
 SpotifyIcon.args = {
   testID: testID,
-  bgColor: "bg-highlight-dark-50",
-  fgColor: "fg-highlight-light-50",
-  size: "m",
+  additionalClasses: [
+    "bg-highlight-dark-50",
+    "fg-highlight-light-50",
+    "padding-xs",
+    "main-text-regular-24",
+  ],
   iconValue: ["fab", "spotify"],
   type: "circle-icon",
 };
@@ -68,9 +82,7 @@ SpotifyIcon.args = {
 export const FooterIcon = Template.bind({});
 FooterIcon.args = {
   testID: testID,
-  bgColor: "none",
-  fgColor: "fg-base-light-50",
-  size: "m",
+  additionalClasses: ["fg-base-light-50", "padding-xs", "main-text-regular-24"],
   iconValue: ["fab", "instagram"],
   type: "default-icon",
 };
@@ -78,18 +90,18 @@ FooterIcon.args = {
 export const LargerArrowIcon = Template.bind({});
 LargerArrowIcon.args = {
   testID: testID,
-  bgColor: "none",
-  fgColor: "fg-highlight-light-50",
-  size: "l",
+  additionalClasses: [
+    "fg-highlight-light-50",
+    "padding-xs",
+    "main-text-regular-34",
+  ],
   iconValue: "arrow-right-long",
   type: "default-icon",
 };
 export const SmallerArrowIcon = Template.bind({});
 SmallerArrowIcon.args = {
   testID: testID,
-  bgColor: "none",
-  fgColor: "fg-highlight",
-  size: "m",
+  additionalClasses: ["fg-highlight", "padding-xs", "main-text-regular-24"],
   iconValue: "arrow-right-long",
   type: "default-icon",
 };
@@ -97,9 +109,12 @@ SmallerArrowIcon.args = {
 export const ItemCountIcon = Template.bind({});
 ItemCountIcon.args = {
   testID: testID,
-  bgColor: "bg-highlight",
-  fgColor: "fg-highlight-light-50",
-  size: "xs",
+  additionalClasses: [
+    "bg-highlight",
+    "fg-highlight-light-50",
+    "padding-xs",
+    "main-text-regular-16",
+  ],
   type: "item-count",
   iconValue: "",
   textValue: 3,
@@ -108,9 +123,11 @@ ItemCountIcon.args = {
 export const TrashIcon = Template.bind({});
 TrashIcon.args = {
   testID: testID,
-  bgColor: "none",
-  fgColor: "fg-highlight-dark-50",
-  size: "xs",
+  additionalClasses: [
+    "fg-highlight-dark-50",
+    "padding-xs",
+    "main-text-regular-16",
+  ],
   type: "default-icon",
   iconValue: "trash",
 };

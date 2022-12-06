@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
-const Label = ({ text, exceptionType = "", additionalClasses, testID }) => {
-  const utils = ["Label", ...(additionalClasses || [])].join(" ");
-  const exType = exceptionType ?? "";
+const Label = ({ text, additionalClasses, testID }) => {
+  const classes = ["Label", ...(additionalClasses || [])].join(" ");
 
   return (
-    <span data-testid={testID} data-object-type={exType} className={utils}>
+    <span data-testid={testID} className={classes}>
       {text}
     </span>
   );
@@ -21,13 +20,12 @@ const utilityClasses = [
   "fg-highlight",
   "fg-highlight-light-50",
   "fg-highlight-dark-50",
+  "fg-base-light-50",
+  "main-text-bold-12",
 ];
-
-const exceptionClasses = ["button", "regular"];
 
 Label.propTypes = {
   text: PropTypes.string.isRequired,
-  exceptionType: PropTypes.oneOf(exceptionClasses),
   testID: PropTypes.string,
   additionalClasses: PropTypes.arrayOf(PropTypes.oneOf(utilityClasses)),
 };
