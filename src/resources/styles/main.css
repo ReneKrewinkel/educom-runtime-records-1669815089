@@ -408,4 +408,19 @@ select {
   width: 7rem;
 }
 
+.Input {
+  border-radius: 30px;
+  border: none;
+  padding: 0.6rem 1.5rem;
+}
+.Input::-moz-placeholder {
+  opacity: 0.2;
+}
+.Input:-ms-input-placeholder {
+  opacity: 0.2;
+}
+.Input::placeholder {
+  opacity: 0.2;
+}
+
 /*! Molecules */ /*! Organisms *//*# sourceMappingURL=main.css.map */
