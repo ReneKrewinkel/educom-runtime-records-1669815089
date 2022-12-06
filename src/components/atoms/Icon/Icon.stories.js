@@ -105,4 +105,14 @@ ItemCountIcon.args = {
   textValue: 3,
 };
 
+export const TrashIcon = Template.bind({});
+TrashIcon.args = {
+  testID: testID,
+  bgColor: "none",
+  fgColor: "fg-highlight-dark-50",
+  size: "xs",
+  type: "default-icon",
+  iconValue: "trash",
+};
+
 export default IconMeta;

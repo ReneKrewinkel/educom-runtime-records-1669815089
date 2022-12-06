@@ -11,9 +11,10 @@ import {
   faShoppingCart,
   faFloppyDisk,
   faCoffee,
+  faTrash,
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(fab, faShoppingCart, faFloppyDisk, faCoffee);
+library.add(fab, faShoppingCart, faFloppyDisk, faCoffee, faTrash);
 
 import Logo from "./components/atoms/Logo";
 

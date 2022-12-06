@@ -6,9 +6,10 @@ import {
   faShoppingCart,
   faFloppyDisk,
   faArrowRightLong,
+  faTrash,
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(fab, faShoppingCart, faFloppyDisk, faArrowRightLong);
+library.add(fab, faShoppingCart, faFloppyDisk, faArrowRightLong, faTrash);
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
