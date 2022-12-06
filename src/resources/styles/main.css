@@ -376,8 +376,7 @@ select {
   line-height: 0px;
   border-radius: 50%;
 }
-
-.CheckoutCount {
+.Icon.item-count {
   display: inline-block;
   border-radius: 50%;
 }
