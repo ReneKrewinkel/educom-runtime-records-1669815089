@@ -355,6 +355,9 @@ select {
 .Logo .large {
   height: 4rem;
 }
+.Logo .extra-large {
+  height: 6rem;
+}
 
 .Price {
   display: inline-block;
