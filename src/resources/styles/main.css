@@ -214,6 +214,11 @@ select {
   font-size: 12px;
 }
 
+.main-text-regular-14 {
+  font-family: var(--main-text-regular);
+  font-size: 14px;
+}
+
 .main-text-regular-16 {
   font-family: var(--main-text-regular);
   font-size: 16px;
@@ -247,6 +252,11 @@ select {
 .main-text-bold-12 {
   font-family: var(--main-text-bold);
   font-size: 12px;
+}
+
+.main-text-bold-14 {
+  font-family: var(--main-text-bold);
+  font-size: 14px;
 }
 
 .main-text-bold-16 {
@@ -294,16 +304,48 @@ select {
   padding: var(--padding-xs);
 }
 
+.padding-inline-xs {
+  padding-inline: var(--padding-xs);
+}
+
+.padding-block-xs {
+  padding-block: var(--padding-xs);
+}
+
 .padding-s {
   padding: var(--padding-s);
+}
+
+.padding-inline-s {
+  padding-inline: var(--padding-s);
+}
+
+.padding-block-s {
+  padding-block: var(--padding-s);
 }
 
 .padding-m {
   padding: var(--padding-m);
 }
 
+.padding-inline-m {
+  padding-inline: var(--padding-m);
+}
+
+.padding-block-m {
+  padding-block: var(--padding-m);
+}
+
 .padding-l {
   padding: var(--padding-l);
+}
+
+.padding-inline-l {
+  padding-inline: var(--padding-l);
+}
+
+.padding-block-l {
+  padding-block: var(--padding-l);
 }
 
 /*! box shadows */
@@ -313,6 +355,31 @@ select {
 
 .light-box-shadow {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.121);
+}
+
+/** FLEXBOX **/
+.flex {
+  display: flex;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.gap-s {
+  gap: 0.5rem;
+}
+
+.gap-m {
+  gap: 1rem;
+}
+
+.gap-l {
+  gap: 2rem;
 }
 
 .h1 {
@@ -382,6 +449,9 @@ select {
 .Icon[data-object-type=item-count] {
   display: inline-block;
   border-radius: 50%;
+  position: absolute;
+  top: -5%;
+  left: 70%;
 }
 
 .Button {
@@ -402,7 +472,7 @@ select {
 }
 
 .LogoIcon.small {
-  width: 3rem;
+  width: 3.5rem;
 }
 .LogoIcon.medium {
   width: 5rem;
@@ -430,17 +500,17 @@ select {
 .HamburgerMenu .bar2,
 .HamburgerMenu .bar3 {
   height: 5px;
-  margin: 6px 0;
+  margin: 11px 0;
   border-radius: 5px;
 }
 .HamburgerMenu .bar1 {
-  width: 20px;
+  width: 25px;
 }
 .HamburgerMenu .bar2 {
-  width: 40px;
+  width: 50px;
 }
 .HamburgerMenu .bar3 {
-  width: 30px;
+  width: 35px;
 }
 .HamburgerMenu[data-object-type=menu-open] .bar1,
 .HamburgerMenu[data-object-type=menu-open] .bar3 {
@@ -456,4 +526,9 @@ select {
   transform: rotate(-45deg) translate3d(7px, -9px, 0);
 }
 
-/*! Molecules */ /*! Organisms *//*# sourceMappingURL=main.css.map */
+/*! Molecules */
+.NavigationBar [data-object-type=shoppingcart-icon] {
+  position: relative;
+}
+
+/*! Organisms *//*# sourceMappingURL=main.css.map */

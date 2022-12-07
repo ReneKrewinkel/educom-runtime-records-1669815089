@@ -8,5 +8,8 @@
   &[data-object-type="item-count"] {
     display: inline-block;
     border-radius: 50%;
+    position: absolute;
+    top: -5%;
+    left: 70%;
   }
 }

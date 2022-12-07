@@ -5,6 +5,7 @@ $headings: map-get($tokens, "headings");
 $paddings: map-get($tokens, "paddings");
 $fontSizes: map-get($tokens, "fontSizes");
 $boxShadows: map-get($tokens, "boxShadows");
+$flexBox: map-get($tokens, "flex");
 
 $color-types: "bg" "Background Color" "background-color",
   "fg" "Foreground Color" "color";

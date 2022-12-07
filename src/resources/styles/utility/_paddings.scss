@@ -5,5 +5,13 @@
     .padding-#{$key} {
       padding: var(#{"--padding-" + $key});
     }
+
+    .padding-inline-#{$key} {
+      padding-inline: var(#{"--padding-" + $key});
+    }
+
+    .padding-block-#{$key} {
+      padding-block: var(#{"--padding-" + $key});
+    }
   }
 }

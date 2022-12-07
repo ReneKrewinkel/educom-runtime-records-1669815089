@@ -23,6 +23,7 @@ $tokens: (
       uri: "../fonts/rouna-regular-webfont",
       sizes: (
         12,
+        14,
         16,
         20,
         24,
@@ -36,6 +37,7 @@ $tokens: (
       uri: "../fonts/rouna-bold-webfont",
       sizes: (
         12,
+        14,
         16,
         20,
         24,
@@ -106,6 +108,27 @@ $tokens: (
       ),
       (
         light: 0 0 8px rgba(0, 0, 0, 0.121),
+      ),
+    ),
+  ),
+  flex: (
+    alignmentTypes: (
+      (
+        justify-content: space-between,
+      ),
+      (
+        align-items: center,
+      ),
+    ),
+    gapSizes: (
+      (
+        s: 0.5,
+      ),
+      (
+        m: 1,
+      ),
+      (
+        l: 2,
       ),
     ),
   ),

@@ -1,0 +1,21 @@
+/** FLEXBOX **/
+
+.flex {
+  display: flex;
+}
+
+@each $style in map-get($flexBox, "alignmentTypes") {
+  @each $key, $value in $style {
+    .#{$key}-#{$value} {
+      #{$key}: #{$value};
+    }
+  }
+}
+
+@each $size in map-get($flexBox, "gapSizes") {
+  @each $key, $value in $size {
+    .gap-#{$key} {
+      gap: #{$value}rem;
+    }
+  }
+}
