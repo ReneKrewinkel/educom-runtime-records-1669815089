@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import { propTypes } from "react-bootstrap/esm/Image";
 
 const Button = (props) => {
   const classes = ["Button", ...(props.additionalClasses || [])].join(" ");
@@ -12,15 +11,9 @@ const Button = (props) => {
   );
 };
 
-const utilityClasses = [
-  "bg-highlight",
-  "fg-highlight-light-50",
-  "main-text-bold-12",
-];
-
 Button.propTypes = {
   testID: PropTypes.string,
-  additionalClasses: PropTypes.oneOf(utilityClasses),
+  additionalClasses: PropTypes.array,
   text: PropTypes.string,
 };
 

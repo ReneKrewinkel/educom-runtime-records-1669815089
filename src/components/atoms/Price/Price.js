@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import { propTypes } from "react-bootstrap/esm/Image";
 
 /// TODO: Define props
 const Price = (props) => {
@@ -27,17 +26,12 @@ const Price = (props) => {
 };
 
 const sizes = ["regular", "large"];
-const utilityClasses = [
-  "fg-highlight-light-50",
-  " bg-highlight ",
-  "default-box-shadow",
-];
 
 Price.propTypes = {
   testID: PropTypes.string,
   size: PropTypes.oneOf(sizes),
   amount: PropTypes.number,
-  additionalClasses: PropTypes.oneOf(utilityClasses),
+  additionalClasses: PropTypes.array,
 };
 
 export default Price;

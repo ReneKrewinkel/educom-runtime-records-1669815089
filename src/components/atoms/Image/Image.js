@@ -14,13 +14,12 @@ const Image = (props) => {
     />
   );
 };
-const utilityClasses = ["light-box-shadow"];
 
 Image.propTypes = {
   testID: PropTypes.string,
-  file: PropTypes.string.isRequired,
-  type: PropTypes.oneOf("rounded", "regular"),
-  additionalClasses: PropTypes.oneOf(utilityClasses),
+  file: PropTypes.string,
+  type: PropTypes.oneOf(["rounded", "regular"]),
+  additionalClasses: PropTypes.array,
 };
 
 export default Image;

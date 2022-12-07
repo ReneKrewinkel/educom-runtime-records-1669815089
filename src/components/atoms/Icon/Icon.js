@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import PropTypes, { array, number, string } from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "../../config/Icons";
 
 /// TODO: Define props
 const Icon = (props) => {
@@ -15,7 +16,11 @@ const Icon = (props) => {
   }
 
   const iconValue =
-    props.iconValue !== "" ? <FontAwesomeIcon icon={props.iconValue} /> : "";
+    props.iconValue === undefined ? (
+      ""
+    ) : (
+      <FontAwesomeIcon icon={props.iconValue} />
+    );
 
   return (
     <div
@@ -33,26 +38,11 @@ const Icon = (props) => {
 /// TODO: Adjust and extend
 const exceptionClasses = ["default-icon", "circle-icon", "item-count"];
 
-const utilityClasses = [
-  "bg-highlight-dark-50",
-  "bg-highlight-light-50",
-  "bg-highlight",
-  "fg-highlight-dark-50",
-  "fg-highlight-light-50",
-  "fg-highlight",
-  "fg-base-light-50",
-  "main-text-regular-16",
-  "main-text-regular-20",
-  "main-text-regular-24",
-  "main-text-regular-34",
-  "padding-xs",
-];
-
 Icon.propTypes = {
   testID: PropTypes.string,
   type: PropTypes.oneOf(exceptionClasses),
-  additionalClasses: PropTypes.oneOf(utilityClasses),
-  iconValue: PropTypes.string,
+  additionalClasses: PropTypes.array,
+  iconValue: PropTypes.array,
   textValue: PropTypes.number,
 };
 

@@ -4,17 +4,6 @@ import { useDatabase } from "./hooks";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab } from "@fortawesome/free-brands-svg-icons";
-import {
-  faShoppingCart,
-  faFloppyDisk,
-  faCoffee,
-  faTrash,
-} from "@fortawesome/free-solid-svg-icons";
-
-library.add(fab, faShoppingCart, faFloppyDisk, faCoffee, faTrash);
 
 import Logo from "./components/atoms/Logo";
 

@@ -15,11 +15,9 @@ const Input = (props) => {
   );
 };
 
-const utilityClasses = ["main-text-bold-28", "light-box-shadow"];
-
 Input.propTypes = {
   testID: PropTypes.string,
-  additionalClasses: PropTypes.oneOf(utilityClasses),
+  additionalClasses: PropTypes.array,
   placeholder: PropTypes.string,
 };
 

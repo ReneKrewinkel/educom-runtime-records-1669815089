@@ -26,7 +26,7 @@ const NavigationBar = (props) => {
               "padding-xs",
               "main-text-regular-22",
             ]}
-            iconValue="shopping-cart"
+            iconValue={["fa", "shopping-cart"]}
             type="circle-icon"
           />
           <Icon
@@ -36,7 +36,6 @@ const NavigationBar = (props) => {
               "padding-xs",
               "main-text-bold-12",
             ]}
-            iconValue=""
             type="item-count"
             textValue={3}
           />

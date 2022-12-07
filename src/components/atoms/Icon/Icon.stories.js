@@ -26,7 +26,7 @@ OrangeShoppingcartIcon.args = {
     "padding-xs",
     "main-text-regular-16",
   ],
-  iconValue: "shopping-cart",
+  iconValue: ["fa", "shopping-cart"],
   type: "circle-icon",
 };
 
@@ -39,7 +39,7 @@ BlackShoppingcartIcon.args = {
     "padding-xs",
     "main-text-regular-24",
   ],
-  iconValue: "shopping-cart",
+  iconValue: ["fa", "shopping-cart"],
   type: "circle-icon",
 };
 export const WhiteShoppingcartIcon = Template.bind({});
@@ -51,7 +51,7 @@ WhiteShoppingcartIcon.args = {
     "padding-xs",
     "main-text-regular-24",
   ],
-  iconValue: "shopping-cart",
+  iconValue: ["fa", "shopping-cart"],
   type: "circle-icon",
 };
 export const SaveIcon = Template.bind({});
@@ -63,7 +63,7 @@ SaveIcon.args = {
     "padding-xs",
     "main-text-regular-24",
   ],
-  iconValue: "floppy-disk",
+  iconValue: ["fa", "floppy-disk"],
   type: "circle-icon",
 };
 export const SpotifyIcon = Template.bind({});
@@ -95,14 +95,14 @@ LargerArrowIcon.args = {
     "padding-xs",
     "main-text-regular-34",
   ],
-  iconValue: "arrow-right-long",
+  iconValue: ["fa", "arrow-right-long"],
   type: "default-icon",
 };
 export const SmallerArrowIcon = Template.bind({});
 SmallerArrowIcon.args = {
   testID: testID,
   additionalClasses: ["fg-highlight", "padding-xs", "main-text-regular-24"],
-  iconValue: "arrow-right-long",
+  iconValue: ["fa", "arrow-right-long"],
   type: "default-icon",
 };
 
@@ -116,7 +116,7 @@ ItemCountIcon.args = {
     "main-text-regular-16",
   ],
   type: "item-count",
-  iconValue: "",
+
   textValue: 3,
 };
 
@@ -129,7 +129,7 @@ TrashIcon.args = {
     "main-text-regular-16",
   ],
   type: "default-icon",
-  iconValue: "trash",
+  iconValue: ["fa", "trash"],
 };
 
 export default IconMeta;
