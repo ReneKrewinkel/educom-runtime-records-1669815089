@@ -8,7 +8,7 @@ const Image = (props) => {
   return (
     <img
       data-testid={props.testID}
-      className={classes}
+      className={`${classes} ${props.size}`}
       data-object-type={props.type}
       src={require(`../../../resources/images/${props.file}`)}
     />
@@ -20,6 +20,7 @@ Image.propTypes = {
   file: PropTypes.string,
   type: PropTypes.oneOf(["rounded", "regular"]),
   additionalClasses: PropTypes.array,
+  size: PropTypes.oneOf(["small", "medium"]),
 };
 
 export default Image;

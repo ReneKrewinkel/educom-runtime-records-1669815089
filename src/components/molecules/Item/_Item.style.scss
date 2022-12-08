@@ -1,0 +1,11 @@
+.Item {
+  .ellipsis-container {
+    margin-inline: 1rem;
+    overflow: hidden;
+  }
+  .long-text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
