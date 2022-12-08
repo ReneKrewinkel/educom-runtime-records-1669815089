@@ -1,0 +1,17 @@
+/*! margins */
+
+@each $size in map-get($margins, "sizes") {
+  @each $key, $value in $size {
+    .margin-#{$key} {
+      margin: var(#{"--margin-" + $key});
+    }
+
+    .margin-inline-#{$key} {
+      margin-inline: var(#{"--margin-" + $key});
+    }
+
+    .margin-block-#{$key} {
+      margin-block: var(#{"--margin-" + $key});
+    }
+  }
+}

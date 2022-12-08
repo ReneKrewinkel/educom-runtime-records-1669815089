@@ -1,1 +1,5 @@
-
+.Label {
+  &[data-object-type="hover-label"] {
+    opacity: 0;
+  }
+}

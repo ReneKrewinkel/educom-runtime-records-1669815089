@@ -16,7 +16,11 @@ const Price = (props) => {
   const classes = ["Price", ...(props.additionalClasses || [])].join(" ");
 
   return (
-    <span data-testid={props.testID} className={classes}>
+    <span
+      data-testid={props.testID}
+      className={classes}
+      data-object-type={props.type}
+    >
       <span className="price-text">
         <span className={`euro ${euroSize}`}>{euro}</span>
         <span className={`cents ${centsSize}`}>.{cents}</span>
@@ -32,6 +36,7 @@ Price.propTypes = {
   size: PropTypes.oneOf(sizes),
   amount: PropTypes.number,
   additionalClasses: PropTypes.array,
+  type: PropTypes.oneOf(["align-left", "align-right"]),
 };
 
 export default Price;

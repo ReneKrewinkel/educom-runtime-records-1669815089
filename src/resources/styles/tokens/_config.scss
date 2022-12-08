@@ -3,6 +3,7 @@ $colors: map-get($tokens, "colors");
 $fonts: map-get($tokens, "fonts");
 $headings: map-get($tokens, "headings");
 $paddings: map-get($tokens, "paddings");
+$margins: map-get($tokens, "margins");
 $fontSizes: map-get($tokens, "fontSizes");
 $boxShadows: map-get($tokens, "boxShadows");
 $flexBox: map-get($tokens, "flex");

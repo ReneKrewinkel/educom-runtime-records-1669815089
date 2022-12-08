@@ -13,4 +13,16 @@
     position: relative;
     top: -8px;
   }
+
+  &[data-object-type="align-right"] {
+    position: absolute;
+    top: -2rem;
+    right: -2rem;
+  }
+
+  &[data-object-type="align-left"] {
+    position: absolute;
+    top: -2rem;
+    left: -2rem;
+  }
 }

@@ -29,6 +29,13 @@
     }
   }
 
+  /** MARGINS **/
+  @each $size in map-get($margins, "sizes") {
+    @each $key, $value in $size {
+      --margin-#{$key}: #{$value}rem;
+    }
+  }
+
   /** BOX SHADOW **/
   @each $shade in map-get($boxShadows, "shades") {
     @each $key, $value in $shade {

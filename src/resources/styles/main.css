@@ -133,6 +133,11 @@ select {
   --padding-s: 1em;
   --padding-m: 2em;
   --padding-l: 3em;
+  /** MARGINS **/
+  --margin-xs: 0.5rem;
+  --margin-s: 1rem;
+  --margin-m: 2rem;
+  --margin-l: 3rem;
   /** BOX SHADOW **/
   --default-box-shadow: 0 0 8px rgba(0, 0, 0, 0.304);
   --light-box-shadow: 0 0 8px rgba(0, 0, 0, 0.121);
@@ -348,6 +353,55 @@ select {
   padding-block: var(--padding-l);
 }
 
+/*! margins */
+.margin-xs {
+  margin: var(--margin-xs);
+}
+
+.margin-inline-xs {
+  margin-inline: var(--margin-xs);
+}
+
+.margin-block-xs {
+  margin-block: var(--margin-xs);
+}
+
+.margin-s {
+  margin: var(--margin-s);
+}
+
+.margin-inline-s {
+  margin-inline: var(--margin-s);
+}
+
+.margin-block-s {
+  margin-block: var(--margin-s);
+}
+
+.margin-m {
+  margin: var(--margin-m);
+}
+
+.margin-inline-m {
+  margin-inline: var(--margin-m);
+}
+
+.margin-block-m {
+  margin-block: var(--margin-m);
+}
+
+.margin-l {
+  margin: var(--margin-l);
+}
+
+.margin-inline-l {
+  margin-inline: var(--margin-l);
+}
+
+.margin-block-l {
+  margin-block: var(--margin-l);
+}
+
 /*! box shadows */
 .default-box-shadow {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.304);
@@ -382,6 +436,14 @@ select {
   gap: 2rem;
 }
 
+.text-align-right {
+  text-align: right;
+}
+
+.line-height-1 {
+  line-height: 1;
+}
+
 .h1 {
   font-family: "heading";
   font-size: 5.625rem;
@@ -413,6 +475,10 @@ select {
 }
 
 /*! Atoms */
+.Label[data-object-type=hover-label] {
+  opacity: 0;
+}
+
 .Logo .small {
   height: 1.2rem;
 }
@@ -440,11 +506,22 @@ select {
   position: relative;
   top: -8px;
 }
+.Price[data-object-type=align-right] {
+  position: absolute;
+  top: -2rem;
+  right: -2rem;
+}
+.Price[data-object-type=align-left] {
+  position: absolute;
+  top: -2rem;
+  left: -2rem;
+}
 
 .Icon[data-object-type=circle-icon] {
   display: inline-block;
   line-height: 0px;
   border-radius: 50%;
+  align-self: center;
 }
 .Icon[data-object-type=item-count] {
   display: inline-block;
@@ -529,6 +606,38 @@ select {
 /*! Molecules */
 .NavigationBar [data-object-type=shoppingcart-icon] {
   position: relative;
+}
+
+.Card {
+  position: relative;
+  display: grid;
+  max-width: 400px;
+}
+.Card .long-text {
+  display: inline-block;
+  max-width: 400px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.Card [data-object-type=hover-container] {
+  line-height: 0px;
+}
+.Card [data-object-type=hover-container] .hover-right,
+.Card [data-object-type=hover-container] [data-object-type=hover-label] {
+  transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out; /* Firefox 4 */
+  -webkit-transition: all 300ms ease-in-out; /* Safari and Chrome */
+  -o-transition: all 300ms ease-in-out; /* Opera */
+}
+.Card [data-object-type=hover-container] .hover-right {
+  padding-right: 0.5rem;
+}
+.Card [data-object-type=hover-container]:hover [data-object-type=hover-label] {
+  opacity: 1;
+}
+.Card [data-object-type=hover-container]:hover .hover-right {
+  transform: translateX(0.4rem);
 }
 
 /*! Organisms *//*# sourceMappingURL=main.css.map */

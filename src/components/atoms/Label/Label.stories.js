@@ -8,6 +8,7 @@ const LabelMeta = {
     testID: { table: { disable: true } },
     additionalClasses: { name: "Utility Classes" },
     text: { name: "Text" },
+    exceptionType: { name: "ExceptionType" },
   },
 };
 

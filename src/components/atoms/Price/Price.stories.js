@@ -9,6 +9,7 @@ const PriceMeta = {
     size: { name: "Size" },
     amount: { name: "Amount" },
     additionalClasses: { name: "AdditionalClasses" },
+    type: { name: "Type" },
   },
 };
 
@@ -25,6 +26,7 @@ DefaultPrice.args = {
     " bg-highlight ",
     "default-box-shadow",
   ],
+  type: "align-left",
 };
 
 export const LargerPrice = Template.bind({});
@@ -37,6 +39,7 @@ LargerPrice.args = {
     " bg-highlight ",
     "default-box-shadow",
   ],
+  type: "align-right",
 };
 
 export default PriceMeta;
