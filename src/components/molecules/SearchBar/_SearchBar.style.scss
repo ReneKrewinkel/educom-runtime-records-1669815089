@@ -1,0 +1,16 @@
+.SearchBar {
+  justify-content: center;
+  form {
+    position: relative;
+    margin-right: 4rem;
+  }
+
+  button {
+    position: absolute;
+    top: 0;
+    right: 0.2rem;
+    background-color: transparent;
+    border: none;
+    height: 100%;
+  }
+}

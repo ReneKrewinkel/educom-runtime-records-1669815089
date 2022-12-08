@@ -254,6 +254,16 @@ select {
   font-size: 34px;
 }
 
+.main-text-regular-42 {
+  font-family: var(--main-text-regular);
+  font-size: 42px;
+}
+
+.main-text-regular-50 {
+  font-family: var(--main-text-regular);
+  font-size: 50px;
+}
+
 .main-text-bold-12 {
   font-family: var(--main-text-bold);
   font-size: 12px;
@@ -292,6 +302,16 @@ select {
 .main-text-bold-34 {
   font-family: var(--main-text-bold);
   font-size: 34px;
+}
+
+.main-text-bold-42 {
+  font-family: var(--main-text-bold);
+  font-size: 42px;
+}
+
+.main-text-bold-50 {
+  font-family: var(--main-text-bold);
+  font-size: 50px;
 }
 
 .menu-items-120 {
@@ -559,9 +579,9 @@ select {
 }
 
 .Input {
-  border-radius: 30px;
+  border-radius: 50px;
   border: none;
-  padding: 0.6rem 1.5rem;
+  padding: 0.7rem 2rem;
 }
 .Input::-moz-placeholder {
   opacity: 0.2;
@@ -638,6 +658,22 @@ select {
 }
 .Card [data-object-type=hover-container]:hover .hover-right {
   transform: translateX(0.4rem);
+}
+
+.SearchBar {
+  justify-content: center;
+}
+.SearchBar form {
+  position: relative;
+  margin-right: 4rem;
+}
+.SearchBar button {
+  position: absolute;
+  top: 0;
+  right: 0.2rem;
+  background-color: transparent;
+  border: none;
+  height: 100%;
 }
 
 /*! Organisms *//*# sourceMappingURL=main.css.map */
