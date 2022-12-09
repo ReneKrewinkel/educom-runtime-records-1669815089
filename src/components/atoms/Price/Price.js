@@ -11,7 +11,7 @@ const Price = (props) => {
   const euroSize =
     props.size === "regular" ? "main-text-bold-20" : "main-text-bold-28";
   const centsSize =
-    props.size === "regular" ? "main-text-bold-12" : "main-text-bold-20";
+    props.size === "regular" ? "main-text-bold-12" : "main-text-bold-16";
 
   const classes = ["Price", ...(props.additionalClasses || [])].join(" ");
 
