@@ -1,12 +1,19 @@
 .CallToAction {
-  gap: 0.8rem;
+  gap: 1.2rem;
   border-radius: 50px;
   display: inline-flex;
+  padding-left: 0;
 
   transition: all 300ms ease-in-out;
   -moz-transition: all 300ms ease-in-out; /* Firefox 4 */
   -webkit-transition: all 300ms ease-in-out; /* Safari and Chrome */
   -o-transition: all 300ms ease-in-out;
+
+  &[data-object-type="no-label"] {
+    .Label {
+      display: none;
+    }
+  }
 
   &:hover {
     background-color: var(--bg-highlight);
@@ -30,7 +37,7 @@
     }
 
     .hover-right {
-      transform: translateX(0.7rem);
+      transform: translateX(0.9rem);
     }
   }
 }

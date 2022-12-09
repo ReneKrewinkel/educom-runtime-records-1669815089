@@ -9,6 +9,7 @@ const CallToActionMeta = {
     additionalClasses: { name: "AdditionalClasses" },
     labelValue: { name: "LabelValue" },
     colorPalette: { name: "Colorpalette" },
+    type: { name: "Type" },
   },
 };
 
@@ -21,6 +22,7 @@ DefaultCallToAction.args = {
   additionalClasses: ["align-items-center", "padding-xs"],
   labelValue: "add to cart",
   colorPalette: "highlight",
+  type: "regular",
 };
 
 export const ShortCallToAction = Template.bind({});
@@ -28,6 +30,7 @@ ShortCallToAction.args = {
   testID: testID,
   additionalClasses: ["align-items-center", "padding-xs"],
   colorPalette: "dark",
+  type: "no-label",
 };
 
 export default CallToActionMeta;

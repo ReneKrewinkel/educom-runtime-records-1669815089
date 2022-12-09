@@ -17,7 +17,11 @@ const CallToAction = (props) => {
       (defaultIconColors = "fg-highlight"));
 
   return (
-    <div data-testid={props.testID} className={classes}>
+    <div
+      data-testid={props.testID}
+      data-object-type={props.type}
+      className={classes}
+    >
       <Label
         text={props.labelValue}
         additionalClasses={[
@@ -53,6 +57,7 @@ CallToAction.propTypes = {
   additionalClasses: PropTypes.array,
   labelValue: PropTypes.string,
   colorPalette: PropTypes.string,
+  type: PropTypes.oneOf(["regular", "no-label"]),
 };
 
 export default CallToAction;
