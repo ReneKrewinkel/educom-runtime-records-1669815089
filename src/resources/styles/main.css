@@ -733,4 +733,10 @@ select {
   gap: 1rem;
 }
 
+.DetailInfo .Label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /*! Organisms *//*# sourceMappingURL=main.css.map */
