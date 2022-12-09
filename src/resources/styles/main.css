@@ -688,4 +688,35 @@ select {
   text-overflow: ellipsis;
 }
 
+.CallToAction {
+  gap: 0.8rem;
+  border-radius: 50px;
+  display: inline-flex;
+  transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out; /* Firefox 4 */
+  -webkit-transition: all 300ms ease-in-out; /* Safari and Chrome */
+  -o-transition: all 300ms ease-in-out;
+}
+.CallToAction:hover {
+  background-color: var(--bg-highlight);
+}
+.CallToAction:hover [data-object-type=default-icon],
+.CallToAction:hover [data-object-type=circle-icon] {
+  transition: transform 300ms ease-in-out;
+  -moz-transition: transform 300ms ease-in-out; /* Firefox 4 */
+  -webkit-transition: transform 300ms ease-in-out; /* Safari and Chrome */
+  -o-transition: transform 300ms ease-in-out; /* Opera */
+}
+.CallToAction:hover .Label,
+.CallToAction:hover [data-object-type=default-icon] {
+  color: var(--fg-highlight-light-50);
+}
+.CallToAction:hover [data-object-type=circle-icon] {
+  color: var(--fg-highlight);
+  background-color: var(--bg-highlight-light-50);
+}
+.CallToAction:hover .hover-right {
+  transform: translateX(0.7rem);
+}
+
 /*! Organisms *//*# sourceMappingURL=main.css.map */
