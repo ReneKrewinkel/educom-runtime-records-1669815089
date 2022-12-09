@@ -767,4 +767,18 @@ select {
   align-self: center;
 }
 
+.PopoutMenu [data-object-type=shoppingcart-icon] {
+  position: relative;
+}
+.PopoutMenu ul {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.PopoutMenu li {
+  border-bottom: solid 2px var(--fg-highlight-dark-50);
+}
+.PopoutMenu a {
+  text-decoration: none;
+}
+
 /*! Organisms *//*# sourceMappingURL=main.css.map */

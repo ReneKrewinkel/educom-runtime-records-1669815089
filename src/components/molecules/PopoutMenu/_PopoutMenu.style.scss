@@ -1,0 +1,15 @@
+.PopoutMenu {
+  [data-object-type="shoppingcart-icon"] {
+    position: relative;
+  }
+  ul {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  li {
+    border-bottom: solid 2px var(--fg-highlight-dark-50);
+  }
+  a {
+    text-decoration: none;
+  }
+}
