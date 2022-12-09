@@ -16,7 +16,7 @@ const Label = ({ text, additionalClasses, testID, exceptionType }) => {
 };
 
 Label.propTypes = {
-  text: PropTypes.string.isRequired,
+  text: PropTypes.string,
   testID: PropTypes.string,
   additionalClasses: PropTypes.array,
   exceptionType: PropTypes.string,

@@ -1,0 +1,10 @@
+.FooterColumn {
+  &[data-object-type="images"] {
+    gap: 0.5rem;
+  }
+
+  li {
+    height: 2rem;
+    gap: 1rem;
+  }
+}

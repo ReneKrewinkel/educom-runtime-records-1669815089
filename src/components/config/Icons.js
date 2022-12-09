@@ -5,6 +5,16 @@ import {
   faFloppyDisk,
   faArrowRightLong,
   faTrash,
+  faEnvelope,
+  faRecordVinyl,
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(fab, faShoppingCart, faFloppyDisk, faArrowRightLong, faTrash);
+library.add(
+  fab,
+  faShoppingCart,
+  faFloppyDisk,
+  faArrowRightLong,
+  faTrash,
+  faEnvelope,
+  faRecordVinyl
+);
