@@ -739,4 +739,21 @@ select {
   text-overflow: ellipsis;
 }
 
+.DetailImage {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.DetailImage[data-object-type=album-display] {
+  padding-right: 6rem;
+}
+.DetailImage[data-object-type=album-display] .record {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+  height: 100%;
+}
+
 /*! Organisms *//*# sourceMappingURL=main.css.map */
