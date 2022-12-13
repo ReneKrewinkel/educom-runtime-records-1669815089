@@ -525,8 +525,8 @@ select {
 }
 .Price .price-text {
   display: inline-block;
-  padding-block: 48%;
-  margin-inline: 10px;
+  padding-block: 44%;
+  margin-inline: 4px;
 }
 .Price .cents {
   position: relative;
@@ -534,13 +534,13 @@ select {
 }
 .Price[data-object-type=align-right] {
   position: absolute;
-  top: -2rem;
-  right: -2rem;
+  top: -1.5rem;
+  right: -1.5rem;
 }
 .Price[data-object-type=align-left] {
   position: absolute;
-  top: -2rem;
-  left: -2rem;
+  top: -1.5rem;
+  left: -1.5rem;
 }
 
 .Icon[data-object-type=circle-icon] {
@@ -566,6 +566,7 @@ select {
 
 .Image {
   height: 100%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -639,12 +640,13 @@ select {
 .Card {
   position: relative;
   display: grid;
-  max-width: 400px;
+  line-height: 1.2;
+}
+.Card .ellipsis-container {
+  white-space: nowrap;
+  overflow: hidden;
 }
 .Card .long-text {
-  display: inline-block;
-  max-width: 400px;
-  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -781,4 +783,8 @@ select {
   text-decoration: none;
 }
 
-/*! Organisms *//*# sourceMappingURL=main.css.map */
+/*! Organisms */
+.CardGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}/*# sourceMappingURL=main.css.map */

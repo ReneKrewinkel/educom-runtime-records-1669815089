@@ -5,8 +5,8 @@
 
   .price-text {
     display: inline-block;
-    padding-block: 48%;
-    margin-inline: 10px;
+    padding-block: 44%;
+    margin-inline: 4px;
   }
 
   .cents {
@@ -16,13 +16,13 @@
 
   &[data-object-type="align-right"] {
     position: absolute;
-    top: -2rem;
-    right: -2rem;
+    top: -1.5rem;
+    right: -1.5rem;
   }
 
   &[data-object-type="align-left"] {
     position: absolute;
-    top: -2rem;
-    left: -2rem;
+    top: -1.5rem;
+    left: -1.5rem;
   }
 }

@@ -17,7 +17,7 @@ const Card = (props) => {
     >
       <div>
         <Price
-          amount={22.5}
+          amount={props.record.data.price}
           size="regular"
           additionalClasses={[
             "fg-highlight-light-50",
@@ -27,15 +27,16 @@ const Card = (props) => {
           type="align-right"
         />
         <Image
-          file={"mythic-sunship-another-shape-of-psychedelic-music.jpg"}
+          file={props.record.data.file_name}
           additionalClasses={["light-box-shadow"]}
           type="rounded"
         />
       </div>
-      <div>
+      <div className="ellipsis-container">
         <Label
-          text="psychedelic rock, jazz fusion"
+          text={props.record.data.genre}
           additionalClasses={[
+            "long-text",
             "fg-highlight",
             "main-text-bold-12",
             "text-align-right",
@@ -44,19 +45,16 @@ const Card = (props) => {
         />
         <div>
           <Label
-            text="Another Shape of Psychedelic Music"
-            additionalClasses={[
-              "long-text",
-              "fg-highlight-dark-50",
-              "h4",
-              "line-height-1",
-            ]}
+            text={props.record.data.title}
+            additionalClasses={["long-text", "fg-highlight-dark-50", "h5"]}
           />
         </div>
         <div className="flex justify-content-space-between align-items-center">
           <Label
-            text="Mythic Sunship"
-            additionalClasses={["fg-base-light-50", "h5"]}
+            text={props.record.data.artist}
+            additionalClasses={
+              ("long-text", ["fg-base-light-50", "main-text-bold-16"])
+            }
           />
           <div
             data-object-type="hover-container"
@@ -86,7 +84,7 @@ const Card = (props) => {
                 "bg-highlight",
                 "fg-highlight-light-50",
                 "padding-xs",
-                "main-text-regular-16",
+                "main-text-regular-12",
               ]}
               iconValue={["fa", "shopping-cart"]}
               type="circle-icon"

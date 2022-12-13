@@ -11,7 +11,7 @@ const PopoutMenu = (props) => {
   return (
     <div data-testid={props.testID} className={classes}>
       <div className="flex justify-content-space-between">
-        <LogoIcon size="small" type="black-logo-icon" />
+        <LogoIcon size="small" type="logo-icon-black" />
         <div className=" flex align-items-center gap-m">
           <div data-object-type="shoppingcart-icon">
             <Icon

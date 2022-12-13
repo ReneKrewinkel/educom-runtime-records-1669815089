@@ -1,12 +1,13 @@
 .Card {
   position: relative;
   display: grid;
-  max-width: 400px;
+  line-height: 1.2;
 
-  .long-text {
-    display: inline-block;
-    max-width: 400px;
+  .ellipsis-container {
     white-space: nowrap;
+    overflow: hidden;
+  }
+  .long-text {
     overflow: hidden;
     text-overflow: ellipsis;
   }

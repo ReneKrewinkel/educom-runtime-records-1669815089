@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./Card";
+import Storydata from "../../config/StoryData";
 
 const CardMeta = {
   title: "molecules/Card",
@@ -7,6 +8,7 @@ const CardMeta = {
   argTypes: {
     testID: { table: { disable: true } },
     additionalClasses: { name: "AdditionalClasses" },
+    data: { name: "Data" },
   },
 };
 
@@ -17,6 +19,7 @@ export const DefaultCard = Template.bind({});
 DefaultCard.args = {
   testID: testID,
   additionalClasses: ["margin-m"],
+  data: Storydata[1],
 };
 
 export default CardMeta;

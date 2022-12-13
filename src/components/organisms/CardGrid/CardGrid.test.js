@@ -4,13 +4,13 @@ import StoryData from "../../config/StoryData";
 
 /// Preferably each story instead of actual object
 ///
-import { DefaultCard } from "./Card.stories";
+import { DefaultCardGrid } from "./CardGrid.stories";
 
-const testID = "Card-" + Math.floor(Math.random() * 90000) + 10000;
+const testID = "CardGrid-" + Math.floor(Math.random() * 90000) + 10000;
 
-describe("Card", () => {
-  it("Can render Card", () => {
-    render(<DefaultCard testID={testID} record={StoryData[1]} />);
+describe("CardGrid", () => {
+  it("Can render CardGrid", () => {
+    render(<DefaultCardGrid testID={testID} data={StoryData} />);
     let defaultCreated = screen.getByTestId(testID);
     expect(defaultCreated).not.toBeNull();
   });

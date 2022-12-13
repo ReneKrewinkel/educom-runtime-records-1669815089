@@ -5,7 +5,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-import Logo from "./components/atoms/Logo";
+import CardGrid from "./components/organisms/CardGrid/CardGrid";
 
 const App = () => {
   const [data, isLoaded] = useDatabase("records");
@@ -13,12 +13,7 @@ const App = () => {
   return (
     <Container fluid>
       <Row>
-        <Col lg={11}>
-          <Logo />
-        </Col>
-        <Col lg={1}>
-          <FontAwesomeIcon icon={faCoffee} style={{ fontSize: 40 }} />
-        </Col>
+        <Col lg={11}>{isLoaded ? <CardGrid data={data} /> : ""}</Col>
       </Row>
 
       <Row>
