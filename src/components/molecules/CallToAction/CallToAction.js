@@ -10,11 +10,13 @@ const CallToAction = (props) => {
   );
   let circleIconColors = "";
   let defaultIconColors = "";
-  props.colorPalette === "dark"
-    ? ((circleIconColors = "bg-highlight-light-50 fg-highlight-dark-50"),
-      (defaultIconColors = "fg-highlight-light-50"))
-    : ((circleIconColors = "bg-highlight fg-highlight-light-50"),
-      (defaultIconColors = "fg-highlight"));
+  if (props.colorPalette === "dark") {
+    circleIconColors = "bg-highlight-light-50 fg-highlight-dark-50";
+    defaultIconColors = "fg-highlight-light-50";
+  } else {
+    circleIconColors = "bg-highlight fg-highlight-light-50";
+    defaultIconColors = "fg-highlight";
+  }
 
   return (
     <div

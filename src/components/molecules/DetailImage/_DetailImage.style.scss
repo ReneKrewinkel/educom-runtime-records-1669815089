@@ -1,14 +1,11 @@
 .DetailImage {
   position: relative;
-  width: fit-content;
+  max-width: 350px;
   &[data-object-type="album-display"] {
-    padding-right: 6rem;
-
     .record {
       position: absolute;
-      z-index: -1;
       top: 0;
-      right: 0;
+      right: -20%;
       height: 100%;
     }
   }

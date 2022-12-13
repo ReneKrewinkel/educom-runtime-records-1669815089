@@ -1,0 +1,47 @@
+.Hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  .inner-section {
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    max-width: 80%;
+
+    .DetailImage-container {
+      margin: 0 auto;
+
+      .Price {
+        z-index: 3;
+      }
+      .Image {
+        position: relative;
+        z-index: 2;
+      }
+      .Record {
+        z-index: 1;
+      }
+    }
+  }
+
+  // XS - Phone
+  @media (max-width: 480px) {
+  }
+
+  // S - Tablet
+  @media (max-width: 768px) {
+  }
+
+  // M - Tablet/Laptop
+  @media (max-width: 1024px) {
+  }
+
+  // L - High Res
+  @media (max-width: 1200px) {
+  }
+
+  // XL - Ultra High Res
+  @media (min-width: 1201px) {
+  }
+}

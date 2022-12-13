@@ -3,4 +3,15 @@
   border: none;
   padding: 0.8rem 1.5rem;
   letter-spacing: 1px;
+  cursor: pointer;
+
+  transition: transform 300ms ease-in-out;
+  -moz-transition: transform 300ms ease-in-out; /* Firefox 4 */
+  -webkit-transition: transform 300ms ease-in-out; /* Safari and Chrome */
+  -o-transition: transform 300ms ease-in-out; /* Opera */
+
+  &:hover {
+    background-color: var(--bg-highlight-light-50);
+    color: var(--fg-highlight);
+  }
 }
