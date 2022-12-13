@@ -731,6 +731,14 @@ select {
   transform: translateX(0.9rem);
 }
 
+.FooterColumn[data-object-type=text] {
+  display: grid;
+  grid-template-rows: 2rem 1fr;
+}
+.FooterColumn[data-object-type=text] .heading {
+  display: flex;
+  align-items: center;
+}
 .FooterColumn[data-object-type=images] {
   gap: 0.5rem;
 }
@@ -787,4 +795,12 @@ select {
 .CardGrid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.Footer {
+  padding: 2rem 8rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.Footer .FooterColumn[data-object-type=images] {
+  justify-content: end;
 }/*# sourceMappingURL=main.css.map */

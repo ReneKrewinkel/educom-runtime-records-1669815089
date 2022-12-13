@@ -16,14 +16,16 @@ const FooterColumn = (props) => {
         data-object-type={props.type}
         className={classes}
       >
-        {typeof props.heading === "string" ? (
-          <Label
-            text={props.heading}
-            additionalClasses={["fg-highlight-light-50", "h6"]}
-          />
-        ) : (
-          props.heading
-        )}
+        <div className="heading">
+          {typeof props.heading === "string" ? (
+            <Label
+              text={props.heading}
+              additionalClasses={["fg-highlight-light-50", "h6"]}
+            />
+          ) : (
+            props.heading
+          )}
+        </div>
 
         <ul>
           {props.content.map((li, index) => {

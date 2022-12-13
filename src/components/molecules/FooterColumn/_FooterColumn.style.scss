@@ -1,4 +1,14 @@
 .FooterColumn {
+  &[data-object-type="text"] {
+    display: grid;
+    grid-template-rows: 2rem 1fr;
+
+    .heading {
+      display: flex;
+      align-items: center;
+    }
+  }
+
   &[data-object-type="images"] {
     gap: 0.5rem;
   }
