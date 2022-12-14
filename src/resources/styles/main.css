@@ -635,10 +635,10 @@ select {
   background-color: transparent;
 }
 .HamburgerMenu[data-object-type=menu-open] .bar1 {
-  transform: rotate(45deg) translate3d(13px, 9px, 0);
+  transform: rotate(45deg) translate3d(6px, 16px, 0);
 }
 .HamburgerMenu[data-object-type=menu-open] .bar3 {
-  transform: rotate(-45deg) translate3d(13px, -9px, 0);
+  transform: rotate(-45deg) translate3d(6px, -16px, 0);
 }
 
 /*! Molecules */
@@ -780,6 +780,21 @@ select {
   align-self: center;
 }
 
+.PopoutMenu {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  top: -200%;
+  left: 0;
+  transition: transform 400ms ease-in-out;
+  -moz-transition: transform 400ms ease-in-out; /* Firefox 4 */
+  -webkit-transition: transform 400ms ease-in-out; /* Safari and Chrome */
+  -o-transition: transform 400ms ease-in-out; /* Opera */
+}
+.PopoutMenu[data-object-type=isActive] {
+  transform: translateY(200%);
+}
 .PopoutMenu [data-object-type=shoppingcart-icon] {
   position: relative;
 }
@@ -787,11 +802,26 @@ select {
   max-width: 700px;
   margin: 0 auto;
 }
-.PopoutMenu li {
+.PopoutMenu ul li .nav-item {
+  width: 100%;
   border-bottom: solid 2px var(--fg-highlight-dark-50);
 }
-.PopoutMenu a {
+.PopoutMenu ul li .Icon {
+  margin-bottom: -1rem;
+  opacity: 0;
+  transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out; /* Firefox 4 */
+  -webkit-transition: all 300ms ease-in-out; /* Safari and Chrome */
+  -o-transition: all 300ms ease-in-out; /* Opera */
+}
+.PopoutMenu ul li a {
   text-decoration: none;
+}
+.PopoutMenu ul li a:hover {
+  color: var(--fg-highlight-dark-50);
+}
+.PopoutMenu ul li:hover .Icon {
+  opacity: 1;
 }
 
 /*! Organisms */
@@ -831,4 +861,8 @@ select {
 }
 .Hero .inner-section .DetailImage-container .Record {
   z-index: 1;
+}
+.Navigation .HamburgerMenu,
+.Navigation .Icon {
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */

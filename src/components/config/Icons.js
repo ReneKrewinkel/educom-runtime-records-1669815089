@@ -7,6 +7,7 @@ import {
   faTrash,
   faEnvelope,
   faRecordVinyl,
+  faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
@@ -16,5 +17,6 @@ library.add(
   faArrowRightLong,
   faTrash,
   faEnvelope,
-  faRecordVinyl
+  faRecordVinyl,
+  faArrowRight
 );
