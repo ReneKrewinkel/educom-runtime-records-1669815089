@@ -651,6 +651,7 @@ select {
   position: relative;
   display: grid;
   line-height: 1.2;
+  margin-bottom: 4rem;
 }
 .Card .ellipsis-container {
   white-space: nowrap;
@@ -837,6 +838,15 @@ select {
 }
 .PopoutMenu ul li:hover .Icon {
   opacity: 1;
+}
+
+.Pagination li {
+  display: inline;
+  padding: 0.2rem;
+}
+.Pagination a {
+  color: var(--fg-base-light-50);
+  text-decoration: none;
 }
 
 /*! Organisms */
