@@ -4,7 +4,7 @@
   grid-template-columns: 1fr 1fr 1fr;
 
   .FooterColumn[data-object-type="images"] {
-    justify-content: end;
+    justify-content: flex-end;
   }
   // XS - Phone
   @media (max-width: 480px) {

@@ -12,6 +12,10 @@
     .DetailImage-container {
       margin: 0 auto;
 
+      .DetailImage {
+        max-width: 350px;
+      }
+
       .Price {
         z-index: 3;
       }

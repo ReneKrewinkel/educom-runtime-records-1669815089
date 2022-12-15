@@ -779,7 +779,6 @@ select {
 
 .DetailImage {
   position: relative;
-  max-width: 350px;
 }
 .DetailImage[data-object-type=album-display] .record {
   position: absolute;
@@ -851,7 +850,7 @@ select {
   grid-template-columns: 1fr 1fr 1fr;
 }
 .Footer .FooterColumn[data-object-type=images] {
-  justify-content: end;
+  justify-content: flex-end;
 }
 .Hero {
   min-height: 100vh;
@@ -867,6 +866,9 @@ select {
 }
 .Hero .inner-section .DetailImage-container {
   margin: 0 auto;
+}
+.Hero .inner-section .DetailImage-container .DetailImage {
+  max-width: 350px;
 }
 .Hero .inner-section .DetailImage-container .Price {
   z-index: 3;
@@ -891,5 +893,22 @@ select {
 }
 .ShoppingCart .CallToAction-container {
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
+}
+.DetailSection {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+.DetailSection .DetailInfo-container {
+  display: grid;
+}
+.DetailSection .DetailInfo {
+  padding-block: 1rem;
+  margin-bottom: 2rem;
+}
+.DetailSection .CallToAction-container {
+  display: grid;
+  max-height: 0;
+  justify-content: flex-end;
 }/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,18 @@
+.DetailSection {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+
+  .DetailInfo-container {
+    display: grid;
+  }
+  .DetailInfo {
+    padding-block: 1rem;
+    margin-bottom: 2rem;
+  }
+  .CallToAction-container {
+    display: grid;
+    max-height: 0;
+    justify-content: flex-end;
+  }
+}
