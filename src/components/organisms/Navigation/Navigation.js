@@ -13,7 +13,6 @@ const Navigation = (props) => {
       <MenuContext.Provider value={value}>
         <NavigationBar
           additionalClasses={[
-            "bg-highlight-light-50",
             "padding-inline-m",
             "padding-block-xs",
             "flex",
@@ -22,11 +21,7 @@ const Navigation = (props) => {
         />
         <PopoutMenu
           menuItems={["shop", "account", "info", "contact"]}
-          additionalClasses={[
-            "bg-highlight-light-50",
-            "padding-inline-m",
-            "padding-block-xs",
-          ]}
+          additionalClasses={["padding-inline-m", "padding-block-xs"]}
         />
       </MenuContext.Provider>
     </div>

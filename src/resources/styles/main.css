@@ -583,7 +583,8 @@ select {
   border-radius: 15px;
 }
 .Image.small {
-  max-height: 100px;
+  max-height: 160px;
+  max-width: 140px;
 }
 
 .LogoIcon.small {
@@ -695,6 +696,20 @@ select {
   height: 100%;
 }
 
+.Item {
+  border-bottom: solid 2px var(--fg-highlight-dark-50);
+}
+.Item .Icon {
+  transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out; /* Firefox 4 */
+  -webkit-transition: all 300ms ease-in-out; /* Safari and Chrome */
+  -o-transition: all 300ms ease-in-out; /* Opera */
+  cursor: pointer;
+}
+.Item .Icon:hover {
+  background-color: var(--bg-highlight-dark-50);
+  color: var(--fg-highlight-light-50);
+}
 .Item .ellipsis-container {
   margin-inline: 1rem;
   overflow: hidden;
@@ -787,6 +802,7 @@ select {
   z-index: 100;
   top: -200%;
   left: 0;
+  background-color: white;
   transition: transform 400ms ease-in-out;
   -moz-transition: transform 400ms ease-in-out; /* Firefox 4 */
   -webkit-transition: transform 400ms ease-in-out; /* Safari and Chrome */
@@ -865,4 +881,15 @@ select {
 .Navigation .HamburgerMenu,
 .Navigation .Icon {
   cursor: pointer;
+}
+
+.ShoppingCart {
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 800px;
+  margin-bottom: 10rem;
+}
+.ShoppingCart .CallToAction-container {
+  display: flex;
+  justify-content: end;
 }/*# sourceMappingURL=main.css.map */

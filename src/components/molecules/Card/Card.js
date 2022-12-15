@@ -18,7 +18,7 @@ const Card = (props) => {
       <div>
         <Price
           amount={props.record.data.price}
-          size="regular"
+          size="small"
           additionalClasses={[
             "fg-highlight-light-50",
             " bg-highlight ",

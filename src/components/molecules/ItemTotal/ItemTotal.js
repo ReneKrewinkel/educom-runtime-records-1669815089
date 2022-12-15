@@ -11,7 +11,7 @@ const ItemTotal = (props) => {
     <div data-testid={props.testID} className={classes}>
       <Label
         text={"total order"}
-        additionalClasses={["fg-highlight-dark-50", "h4"]}
+        additionalClasses={["fg-highlight-dark-50", "h3"]}
       />
       <Price
         size={"large"}

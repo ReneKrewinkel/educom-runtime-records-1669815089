@@ -1,4 +1,17 @@
 .Item {
+  border-bottom: solid 2px var(--fg-highlight-dark-50);
+
+  .Icon {
+    transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out; /* Firefox 4 */
+    -webkit-transition: all 300ms ease-in-out; /* Safari and Chrome */
+    -o-transition: all 300ms ease-in-out; /* Opera */
+    cursor: pointer;
+  }
+  .Icon:hover {
+    background-color: var(--bg-highlight-dark-50);
+    color: var(--fg-highlight-light-50);
+  }
   .ellipsis-container {
     margin-inline: 1rem;
     overflow: hidden;

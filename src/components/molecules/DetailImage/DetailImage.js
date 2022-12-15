@@ -16,7 +16,7 @@ const DetailImage = (props) => {
     >
       <Price
         amount={22.5}
-        size="regular"
+        size="small"
         additionalClasses={[
           "fg-highlight-light-50",
           " bg-highlight ",

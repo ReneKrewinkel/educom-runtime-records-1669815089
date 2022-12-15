@@ -28,8 +28,9 @@ const CallToAction = (props) => {
         text={props.labelValue}
         additionalClasses={[
           "fg-highlight",
-          "main-text-regular-16",
+          "main-text-bold-16",
           "text-align-right",
+          "padding-inline-xs",
         ]}
       />
       <Icon

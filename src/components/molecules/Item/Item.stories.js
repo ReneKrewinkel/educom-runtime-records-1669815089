@@ -20,6 +20,7 @@ DefaultItem.args = {
     "flex",
     "align-items-center",
     "justify-content-space-between",
+    "padding-block-s",
   ],
 };
 

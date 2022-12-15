@@ -22,11 +22,7 @@ const Item = (props) => {
           <div>
             <Label
               text={"Another Shape of Psychedelic Music"}
-              additionalClasses={[
-                "long-text",
-                "fg-highlight-dark-50",
-                "main-text-bold-24",
-              ]}
+              additionalClasses={["long-text", "fg-highlight-dark-50", "h4"]}
             />
             <Label
               text={"Mythic Sunship"}
@@ -41,7 +37,7 @@ const Item = (props) => {
       </div>
       <div className="flex align-items-center">
         <Price
-          size={"regular"}
+          size={"medium"}
           amount={22.5}
           additionalClasses={[
             "fg-highlight-light-50",
@@ -56,7 +52,7 @@ const Item = (props) => {
             "main-text-regular-16",
             "margin-inline-xs",
           ]}
-          type={"default-icon"}
+          type={"circle-icon"}
           iconValue={["fa", "trash"]}
         />
       </div>

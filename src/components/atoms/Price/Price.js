@@ -8,10 +8,19 @@ const Price = (props) => {
   const euro = array[0];
   const cents = array[1];
 
-  const euroSize =
-    props.size === "regular" ? "main-text-bold-20" : "main-text-bold-28";
-  const centsSize =
-    props.size === "regular" ? "main-text-bold-12" : "main-text-bold-16";
+  let euroSize = "";
+  let centsSize = "";
+
+  if (props.size === "small") {
+    euroSize = "main-text-bold-20";
+    centsSize = "main-text-bold-12";
+  } else if (props.size === "medium") {
+    euroSize = "main-text-bold-28";
+    centsSize = "main-text-bold-16";
+  } else {
+    euroSize = "main-text-bold-34";
+    centsSize = "main-text-bold-28";
+  }
 
   const classes = ["Price", ...(props.additionalClasses || [])].join(" ");
 
@@ -29,7 +38,7 @@ const Price = (props) => {
   );
 };
 
-const sizes = ["regular", "large"];
+const sizes = ["small", "medium", "large"];
 
 Price.propTypes = {
   testID: PropTypes.string,
