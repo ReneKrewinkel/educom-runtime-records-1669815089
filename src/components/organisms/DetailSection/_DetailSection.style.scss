@@ -3,16 +3,17 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2rem;
 
+  margin: 0 auto;
+  padding: 4rem 8rem;
+
   .DetailInfo-container {
+    padding-block: 1.5rem;
     display: grid;
-  }
-  .DetailInfo {
-    padding-block: 1rem;
-    margin-bottom: 2rem;
+    align-content: space-between;
   }
   .CallToAction-container {
     display: grid;
-    max-height: 0;
+    margin-top: 1rem;
     justify-content: flex-end;
   }
 }

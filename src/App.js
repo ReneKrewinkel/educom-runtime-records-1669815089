@@ -2,7 +2,7 @@ import "./resources/styles/main.css";
 import { useDatabase } from "./hooks";
 
 import Navigation from "./components/organisms/Navigation/Navigation";
-import Home from "./components/pages/Home/Home";
+import Detail from "./components/pages/Detail/Detail";
 import Footer from "./components/organisms/Footer/Footer";
 
 const App = () => {
@@ -11,7 +11,7 @@ const App = () => {
   return (
     <div className="App">
       <Navigation />
-      <Home data={isLoaded ? data : ""} cardsPerPage={8} />
+      <Detail data={isLoaded ? data : ""} />
       <Footer additionalClasses={["bg-highlight-dark-50"]} />
     </div>
   );

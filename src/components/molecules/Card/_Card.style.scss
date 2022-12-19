@@ -14,6 +14,7 @@
   }
   [data-object-type="hover-container"] {
     line-height: 0px;
+    cursor: pointer;
     .hover-right,
     [data-object-type="hover-label"] {
       transition: all 300ms ease-in-out;

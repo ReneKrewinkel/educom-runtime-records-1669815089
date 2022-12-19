@@ -663,6 +663,7 @@ select {
 }
 .Card [data-object-type=hover-container] {
   line-height: 0px;
+  cursor: pointer;
 }
 .Card [data-object-type=hover-container] .hover-right,
 .Card [data-object-type=hover-container] [data-object-type=hover-label] {
@@ -772,6 +773,9 @@ select {
   gap: 1rem;
 }
 
+.DetailInfo {
+  overflow: hidden;
+}
 .DetailInfo .Label {
   white-space: nowrap;
   overflow: hidden;
@@ -915,16 +919,16 @@ select {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2rem;
+  margin: 0 auto;
+  padding: 4rem 8rem;
 }
 .DetailSection .DetailInfo-container {
+  padding-block: 1.5rem;
   display: grid;
-}
-.DetailSection .DetailInfo {
-  padding-block: 1rem;
-  margin-bottom: 2rem;
+  align-content: space-between;
 }
 .DetailSection .CallToAction-container {
   display: grid;
-  max-height: 0;
+  margin-top: 1rem;
   justify-content: flex-end;
 }/*# sourceMappingURL=main.css.map */
