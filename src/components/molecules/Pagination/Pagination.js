@@ -4,10 +4,13 @@ import PropTypes from "prop-types";
 /// TODO: Define props
 const Pagination = (props) => {
   let pageNumbers = [];
-  for (let i = 1; i <= Math.ceil(props.data.length / props.cardsPerPage); i++) {
+  for (
+    let i = 1;
+    i <= Math.ceil(props.numberOfCards / props.cardsPerPage);
+    i++
+  ) {
     pageNumbers.push(i);
   }
-  console.log(pageNumbers);
 
   return (
     <div
@@ -17,8 +20,21 @@ const Pagination = (props) => {
       <ul>
         {pageNumbers.map((number) => {
           return (
-            <li key={number}>
-              <a href="#">{number}</a>
+            <li
+              key={number}
+              className={
+                number === props.currentPage
+                  ? "main-text-bold-16 fg-highlight-dark-50"
+                  : ""
+              }
+            >
+              <a
+                onClick={() => {
+                  props.setPage(number);
+                }}
+              >
+                {number}
+              </a>
             </li>
           );
         })}
@@ -29,7 +45,7 @@ const Pagination = (props) => {
 
 Pagination.propTypes = {
   testID: PropTypes.string,
-  data: PropTypes.array,
+  numberOfCards: PropTypes.number,
   cardsPerPage: PropTypes.number,
 };
 

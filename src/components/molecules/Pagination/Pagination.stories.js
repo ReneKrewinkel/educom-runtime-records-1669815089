@@ -7,7 +7,7 @@ const PaginationMeta = {
   component: Pagination,
   argTypes: {
     testID: { table: { disable: true } },
-    data: { name: "Data" },
+    numberOfCards: { name: "NumberOfCards" },
     cardsPerPage: { name: "CardsPerPage" },
   },
 };
@@ -18,7 +18,7 @@ const Template = (args) => <Pagination {...args} />;
 export const DefaultPagination = Template.bind({});
 DefaultPagination.args = {
   testID: testID,
-  data: StoryData,
+  numberOfCards: StoryData.length,
   cardsPerPage: 8,
 };
 

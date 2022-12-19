@@ -1,5 +1,6 @@
 .CardGrid {
   display: grid;
+  margin-inline: 6rem;
 
   grid-template-columns: repeat(4, minmax(0, 1fr));
   // XS - Phone

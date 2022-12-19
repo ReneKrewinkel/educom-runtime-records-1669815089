@@ -35,6 +35,7 @@ const FooterColumn = (props) => {
                   ""
                 ) : (
                   <Icon
+                    key={li.icon}
                     additionalClasses={[
                       "fg-base-light-50",
                       "main-text-regular-24",
@@ -44,6 +45,7 @@ const FooterColumn = (props) => {
                   />
                 )}
                 <Label
+                  key={li}
                   text={li.text}
                   additionalClasses={["fg-base-light-50", "main-text-bold-12"]}
                 />

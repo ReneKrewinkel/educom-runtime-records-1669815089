@@ -840,9 +840,14 @@ select {
   opacity: 1;
 }
 
+.Pagination ul {
+  text-align: center;
+  padding-bottom: 2rem;
+}
 .Pagination li {
   display: inline;
   padding: 0.2rem;
+  cursor: pointer;
 }
 .Pagination a {
   color: var(--fg-base-light-50);
@@ -852,6 +857,7 @@ select {
 /*! Organisms */
 .CardGrid {
   display: grid;
+  margin-inline: 6rem;
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 .Footer {

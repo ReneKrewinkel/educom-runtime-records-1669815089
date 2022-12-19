@@ -1,7 +1,12 @@
 .Pagination {
+  ul {
+    text-align: center;
+    padding-bottom: 2rem;
+  }
   li {
     display: inline;
     padding: 0.2rem;
+    cursor: pointer;
   }
   a {
     color: var(--fg-base-light-50);

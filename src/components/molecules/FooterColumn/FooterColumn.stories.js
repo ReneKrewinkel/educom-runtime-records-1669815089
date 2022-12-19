@@ -48,8 +48,8 @@ export const LogoFooterColumn = Template.bind({});
 LogoFooterColumn.args = {
   testID: testID,
   content: [
-    <Logo size={"extra-large"} exceptionType={"logo2"} />,
-    <LogoIcon size={"large"} type={"logo-icon-white"} />,
+    <Logo size={"extra-large"} exceptionType={"logo2"} key={"icon"} />,
+    <LogoIcon size={"large"} type={"logo-icon-white"} key={"logo-icon"} />,
   ],
   type: "images",
   additionalClasses: ["flex", " align-items-center"],
