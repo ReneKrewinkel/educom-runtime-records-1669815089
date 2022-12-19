@@ -4,6 +4,8 @@ import HamburgerMenu from "../../atoms/HamburgerMenu/HamburgerMenu";
 import LogoIcon from "../../atoms/LogoIcon";
 import Icon from "../../atoms/Icon";
 
+import { Link } from "react-router-dom";
+
 import { MenuContext } from "../../../contexts";
 import { Container } from "react-bootstrap";
 /// TODO: Define props
@@ -20,7 +22,7 @@ const PopoutMenu = (props) => {
         <div className="flex justify-content-space-between">
           <LogoIcon size="small" type="logo-icon-black" />
           <div className=" flex align-items-center gap-m">
-            <div data-object-type="shoppingcart-icon">
+            <Link to="/shoppingcart" data-object-type="shoppingcart-icon">
               <Icon
                 additionalClasses={[
                   "bg-highlight-dark-50",
@@ -41,7 +43,7 @@ const PopoutMenu = (props) => {
                 type="item-count"
                 textValue={3}
               />
-            </div>
+            </Link>
             <HamburgerMenu type="menu-open" />
           </div>
         </div>

@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import DetailImage from "../../molecules/DetailImage/DetailImage";
 import DetailInfo from "../../molecules/DetailInfo/DetailInfo";
 import CallToAction from "../../molecules/CallToAction/CallToAction";
+import { Link } from "react-router-dom";
 
 /// TODO: Define props
 const DetailSection = (props) => {
@@ -21,14 +22,14 @@ const DetailSection = (props) => {
             "Surfing psychedelic, stoner rock vibes to the edges of outer space, this is a dependably freaky series of jams from an incredibly industrious band."
           }
         />
-        <div className="CallToAction-container">
+        <Link to="/shoppingcart" className="CallToAction-container">
           <CallToAction
             additionalClasses={["align-items-center", "padding-xs"]}
             labelValue={"add to cart"}
             colorPalette={"highlight"}
             type={"regular"}
           />
-        </div>
+        </Link>
       </div>
     </div>
   );

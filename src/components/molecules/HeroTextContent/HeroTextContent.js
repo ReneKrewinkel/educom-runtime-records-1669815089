@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Label from "../../atoms/Label/Label";
 import CallToAction from "../CallToAction/CallToAction";
 import Button from "../../atoms/Button/Button";
+import { Link } from "react-router-dom";
 
 /// TODO: Define props
 const HeroTextContent = (props) => {
@@ -26,19 +27,23 @@ const HeroTextContent = (props) => {
         additionalClasses={["fg-highlight", "main-text-bold-12"]}
       />
       <div className="flex justify-content-space-between align-items-center margin-block-s">
-        <CallToAction
-          additionalClasses={["align-items-center", "padding-xs"]}
-          colorPalette={"dark"}
-          type={"no-label"}
-        />
-        <Button
-          additionalClasses={[
-            "bg-highlight",
-            "fg-highlight-light-50",
-            "main-text-bold-12",
-          ]}
-          text={"read more"}
-        />
+        <Link to={"/shoppingcart"}>
+          <CallToAction
+            additionalClasses={["align-items-center", "padding-xs"]}
+            colorPalette={"dark"}
+            type={"no-label"}
+          />
+        </Link>
+        <Link to="/detail">
+          <Button
+            additionalClasses={[
+              "bg-highlight",
+              "fg-highlight-light-50",
+              "main-text-bold-12",
+            ]}
+            text={"read more"}
+          />
+        </Link>
       </div>
     </div>
   );

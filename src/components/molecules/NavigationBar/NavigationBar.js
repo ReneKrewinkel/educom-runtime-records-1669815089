@@ -4,7 +4,7 @@ import LogoIcon from "../../atoms/LogoIcon";
 import Logo from "../../atoms/Logo";
 import Icon from "../../atoms/Icon";
 import HamburgerMenu from "../../atoms/HamburgerMenu/HamburgerMenu";
-
+import { Link } from "react-router-dom";
 /// TODO: Define props
 const NavigationBar = (props) => {
   const classes = ["NavigationBar", ...(props.additionalClasses || [])].join(
@@ -13,12 +13,13 @@ const NavigationBar = (props) => {
 
   return (
     <div data-testid={props.testID} className={classes}>
-      <div className=" flex align-items-center gap-s ">
+      <Link to="/" className=" flex align-items-center gap-s ">
         <LogoIcon type="logo-icon-black" size="small" />
         <Logo size="medium" />
-      </div>
+      </Link>
+
       <div className=" flex align-items-center gap-m">
-        <div data-object-type="shoppingcart-icon">
+        <Link to={"/shoppingcart"} data-object-type="shoppingcart-icon">
           <Icon
             additionalClasses={[
               "bg-highlight-dark-50",
@@ -39,7 +40,7 @@ const NavigationBar = (props) => {
             type="item-count"
             textValue={3}
           />
-        </div>
+        </Link>
 
         <HamburgerMenu type="menu-closed" />
       </div>

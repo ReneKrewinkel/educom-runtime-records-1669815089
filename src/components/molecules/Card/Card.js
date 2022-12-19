@@ -4,7 +4,7 @@ import Price from "../../atoms/Price/Price";
 import Image from "../../atoms/Image/Image";
 import Label from "../../atoms/Label/Label";
 import Icon from "../../atoms/Icon";
-
+import { Link } from "react-router-dom";
 /// TODO: Define props
 const Card = (props) => {
   const classes = ["Card", ...(props.additionalClasses || [])].join(" ");
@@ -15,7 +15,7 @@ const Card = (props) => {
       data-object-type={props.type ?? ""}
       className={classes}
     >
-      <div>
+      <Link to="/detail">
         <Price
           amount={props.record.data.price}
           size="small"
@@ -31,7 +31,7 @@ const Card = (props) => {
           additionalClasses={["light-box-shadow"]}
           type="rounded"
         />
-      </div>
+      </Link>
       <div className="ellipsis-container">
         <Label
           text={props.record.data.genre}
@@ -56,7 +56,8 @@ const Card = (props) => {
               ("long-text", ["fg-base-light-50", "main-text-bold-16"])
             }
           />
-          <div
+          <Link
+            to={"/shoppingcart"}
             data-object-type="hover-container"
             className="flex align-items-center"
           >
@@ -89,7 +90,7 @@ const Card = (props) => {
               iconValue={["fa", "shopping-cart"]}
               type="circle-icon"
             />
-          </div>
+          </Link>
         </div>
       </div>
     </div>
