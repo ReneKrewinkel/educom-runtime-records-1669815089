@@ -7,20 +7,21 @@ import { Link } from "react-router-dom";
 
 /// TODO: Define props
 const DetailSection = (props) => {
+  console.log(props.data);
   return (
     <div data-testid={props.testID} className={"DetailSection"}>
-      <DetailImage additionalClasses={["margin-s"]} exceptionType={""} />
+      <DetailImage
+        additionalClasses={["margin-s"]}
+        exceptionType={""}
+        data={props.data}
+      />
       <div className="DetailInfo-container">
         <DetailInfo
-          title={"Dickfehler Studio Treffen 1"}
-          artist={"Kombynat Robotron"}
-          genre={"instrumental, psychedelic rock, space rock, kosmische Musik"}
-          shortDescription={
-            "This Psychedelic stonker from Drone Rock Records is a live, professionally recorded session from Kombynat Robotron. Designed to be played very loudly, 'Dickfehler Studio Treffen 1' is kosmiche music at its very finest, consisting of lengthy jams filled with sonic diversity and excellent displays of dynamics."
-          }
-          longDescription={
-            "Surfing psychedelic, stoner rock vibes to the edges of outer space, this is a dependably freaky series of jams from an incredibly industrious band."
-          }
+          title={props.data.data.title}
+          artist={props.data.data.artist}
+          genre={props.data.data.genre}
+          shortDescription={props.data.data.short_description}
+          longDescription={props.data.data.long_description}
         />
         <Link to="/shoppingcart" className="CallToAction-container">
           <CallToAction
@@ -37,6 +38,7 @@ const DetailSection = (props) => {
 
 DetailSection.propTypes = {
   testID: PropTypes.string,
+  data: PropTypes.array,
 };
 
 export default DetailSection;

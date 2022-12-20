@@ -8,7 +8,7 @@ const CardMeta = {
   argTypes: {
     testID: { table: { disable: true } },
     additionalClasses: { name: "AdditionalClasses" },
-    data: { name: "Data" },
+    product: { name: "Product" },
   },
 };
 
@@ -19,7 +19,7 @@ export const DefaultCard = Template.bind({});
 DefaultCard.args = {
   testID: testID,
   additionalClasses: ["margin-m"],
-  data: Storydata[1],
+  product: Storydata[1],
 };
 
 export default CardMeta;

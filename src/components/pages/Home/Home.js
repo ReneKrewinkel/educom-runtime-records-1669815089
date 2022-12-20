@@ -18,10 +18,11 @@ const Home = (props) => {
   const indexOfFirstCard = indexOfLastCard - cardsPerPage;
 
   const currentCards = props.data.slice(indexOfFirstCard, indexOfLastCard);
-
-  return (
+  return props.data === "" ? (
+    <div>Loading ...</div>
+  ) : (
     <div data-testid={props.testID} className={"Home"}>
-      <Hero />
+      <Hero data={props.data[0]} />
       <SearchBar
         additionalClasses={["flex", "align-items-center", "margin-block-l"]}
       />

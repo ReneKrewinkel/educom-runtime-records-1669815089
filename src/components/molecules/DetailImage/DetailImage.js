@@ -15,7 +15,7 @@ const DetailImage = (props) => {
       className={classes}
     >
       <Price
-        amount={22.5}
+        amount={props.data.data.price}
         size="small"
         additionalClasses={[
           "fg-highlight-light-50",
@@ -27,7 +27,7 @@ const DetailImage = (props) => {
       {props.exceptionType === "album-display" ? (
         <span className="displayContainer">
           <Image
-            file={"mythic-sunship-another-shape-of-psychedelic-music.jpg"}
+            file={props.data.data.file_name}
             additionalClasses={[""]}
             type="regular"
           />
@@ -35,7 +35,7 @@ const DetailImage = (props) => {
         </span>
       ) : (
         <Image
-          file={"mythic-sunship-another-shape-of-psychedelic-music.jpg"}
+          file={props.data.data.file_name}
           additionalClasses={["light-box-shadow"]}
           type="rounded"
         />
@@ -48,6 +48,7 @@ DetailImage.propTypes = {
   testID: PropTypes.string,
   additionalClasses: PropTypes.array,
   exceptionType: PropTypes.string,
+  data: PropTypes.object,
 };
 
 export default DetailImage;

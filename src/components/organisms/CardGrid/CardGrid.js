@@ -9,12 +9,12 @@ const CardGrid = (props) => {
   return (
     <div data-testid={props.testID} className={classes}>
       {props.data.length > 0
-        ? props.data.map((record, index) => {
+        ? props.data.map((product, index) => {
             return (
               <Card
                 key={index}
                 additionalClasses={["margin-block-m", "margin-inline-s"]}
-                record={record}
+                product={product}
               />
             );
           })

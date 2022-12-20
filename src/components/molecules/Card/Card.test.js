@@ -10,7 +10,7 @@ const testID = "Card-" + Math.floor(Math.random() * 90000) + 10000;
 
 describe("Card", () => {
   it("Can render Card", () => {
-    render(<DefaultCard testID={testID} record={StoryData[1]} />);
+    render(<DefaultCard testID={testID} product={StoryData[1]} />);
     let defaultCreated = screen.getByTestId(testID);
     expect(defaultCreated).not.toBeNull();
   });

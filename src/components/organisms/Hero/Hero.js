@@ -20,9 +20,9 @@ const Hero = (props) => {
       }}
     >
       <div className="inner-section">
-        <HeroTextContent />
+        <HeroTextContent data={props.data} />
         <div className="DetailImage-container">
-          <DetailImage exceptionType={"album-display"} />
+          <DetailImage exceptionType={"album-display"} data={props.data} />
         </div>
       </div>
     </div>
@@ -32,6 +32,7 @@ const Hero = (props) => {
 Hero.propTypes = {
   testID: PropTypes.string,
   additionalClasses: PropTypes.array,
+  data: PropTypes.object,
 };
 
 export default Hero;

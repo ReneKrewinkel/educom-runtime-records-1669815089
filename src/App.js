@@ -18,7 +18,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home data={isLoaded ? data : ""} />} />
         <Route
-          path="/detail"
+          path="/detail/:type"
           element={<Detail data={isLoaded ? data : ""} />}
         />
         <Route path="/shoppingcart" element={<ShoppingCart />} />

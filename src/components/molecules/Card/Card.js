@@ -15,9 +15,12 @@ const Card = (props) => {
       data-object-type={props.type ?? ""}
       className={classes}
     >
-      <Link to="/detail">
+      <Link
+        to={`/detail/${props.product.data.title}`}
+        state={{ product: props.product }}
+      >
         <Price
-          amount={props.record.data.price}
+          amount={props.product.data.price}
           size="small"
           additionalClasses={[
             "fg-highlight-light-50",
@@ -27,14 +30,14 @@ const Card = (props) => {
           type="align-right"
         />
         <Image
-          file={props.record.data.file_name}
+          file={props.product.data.file_name}
           additionalClasses={["light-box-shadow"]}
           type="rounded"
         />
       </Link>
       <div className="ellipsis-container">
         <Label
-          text={props.record.data.genre}
+          text={props.product.data.genre}
           additionalClasses={[
             "long-text",
             "fg-highlight",
@@ -45,13 +48,13 @@ const Card = (props) => {
         />
         <div>
           <Label
-            text={props.record.data.title}
+            text={props.product.data.title}
             additionalClasses={["long-text", "fg-highlight-dark-50", "h5"]}
           />
         </div>
         <div className="flex justify-content-space-between align-items-center">
           <Label
-            text={props.record.data.artist}
+            text={props.product.data.artist}
             additionalClasses={
               ("long-text", ["fg-base-light-50", "main-text-bold-16"])
             }
@@ -100,6 +103,7 @@ const Card = (props) => {
 Card.propTypes = {
   testID: PropTypes.string,
   additionalClasses: PropTypes.array,
+  product: PropTypes.object,
 };
 
 export default Card;

@@ -10,20 +10,18 @@ const HeroTextContent = (props) => {
   return (
     <div data-testid={props.testID} className={`HeroTextContent `}>
       <Label
-        text={"Adulkt Life"}
+        text={props.data.data.artist}
         additionalClasses={["fg-base-light-50", "main-text-bold-20"]}
       />
       <Label
-        text={"Book of Curses"}
+        text={props.data.data.title}
         additionalClasses={["fg-highlight-light-50", "h3"]}
       />
       <p className="main-text-regular-16 fg-highlight-light-50 padding-block-xs">
-        This blistering punk-rock debut fom a 55-year-old veteran of the scene
-        delivers urgent music for evergreen unease. These are weary, angry
-        songs, crafted with an insatiable verve and an almost triumphant fury.
+        {props.data.data.long_description}
       </p>
       <Label
-        text={"post punk, indie, punk"}
+        text={props.data.data.genre}
         additionalClasses={["fg-highlight", "main-text-bold-12"]}
       />
       <div className="flex justify-content-space-between align-items-center margin-block-s">
@@ -51,6 +49,7 @@ const HeroTextContent = (props) => {
 
 HeroTextContent.propTypes = {
   testID: PropTypes.string,
+  data: PropTypes.object,
 };
 
 export default HeroTextContent;
