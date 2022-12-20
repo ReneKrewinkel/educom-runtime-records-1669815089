@@ -8,24 +8,20 @@ import Icon from "../../atoms/Icon";
 /// TODO: Define props
 const Item = (props) => {
   const classes = ["Item", ...(props.additionalClasses || [])].join(" ");
-
+  const item = props.data.product;
   return (
     <div data-testid={props.testID} className={classes}>
       <div className="flex align-items-center">
-        <Image
-          type={"rounded"}
-          file={"mythic-sunship-another-shape-of-psychedelic-music.jpg"}
-          size={"small"}
-        />
+        <Image type={"rounded"} file={item.data.file_name} size={"small"} />
 
         <div className="ellipsis-container">
           <div>
             <Label
-              text={"Another Shape of Psychedelic Music"}
+              text={item.data.title}
               additionalClasses={["long-text", "fg-highlight-dark-50", "h4"]}
             />
             <Label
-              text={"Mythic Sunship"}
+              text={item.data.artist}
               additionalClasses={[
                 "long-text",
                 "fg-base-light-50",
@@ -38,7 +34,7 @@ const Item = (props) => {
       <div className="flex align-items-center">
         <Price
           size={"medium"}
-          amount={22.5}
+          amount={item.data.price}
           additionalClasses={[
             "fg-highlight-light-50",
             " bg-highlight ",

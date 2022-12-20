@@ -6,12 +6,13 @@ import Icon from "../../atoms/Icon";
 
 import { Link } from "react-router-dom";
 
-import { MenuContext } from "../../../contexts";
+import CartContext, { MenuContext } from "../../../contexts";
 import { Container } from "react-bootstrap";
 /// TODO: Define props
 const PopoutMenu = (props) => {
   const classes = ["PopoutMenu", ...(props.additionalClasses || [])].join(" ");
   const { isActive, setIsActive } = useContext(MenuContext);
+  const { items } = useContext(CartContext);
   return (
     <div
       data-testid={props.testID}
@@ -41,7 +42,7 @@ const PopoutMenu = (props) => {
                   "main-text-bold-12",
                 ]}
                 type="item-count"
-                textValue={3}
+                textValue={items.length}
               />
             </Link>
             <HamburgerMenu type="menu-open" />

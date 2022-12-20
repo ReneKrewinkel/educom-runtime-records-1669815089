@@ -9,39 +9,24 @@ import CartContext from "../../../contexts";
 const ShoppingCart = (props) => {
   const { items } = useContext(CartContext);
 
-  console.log(items);
   return (
     <div data-testid={props.testID} className={"ShoppingCart"}>
       <Label
         text={"shopping cart"}
         additionalClasses={["h2", "fg-highlight-dark-50", "padding-block-xs"]}
       />
+      {items.map((item) => (
+        <Item
+          additionalClasses={[
+            "flex",
+            "align-items-center",
+            "justify-content-space-between",
+            "padding-block-s",
+          ]}
+          data={item}
+        />
+      ))}
 
-      <div>{items.length}</div>
-      <Item
-        additionalClasses={[
-          "flex",
-          "align-items-center",
-          "justify-content-space-between",
-          "padding-block-s",
-        ]}
-      />
-      <Item
-        additionalClasses={[
-          "flex",
-          "align-items-center",
-          "justify-content-space-between",
-          "padding-block-s",
-        ]}
-      />
-      <Item
-        additionalClasses={[
-          "flex",
-          "align-items-center",
-          "justify-content-space-between",
-          "padding-block-s",
-        ]}
-      />
       <ItemTotal
         additionalClasses={[
           "flex",

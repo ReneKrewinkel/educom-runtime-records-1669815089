@@ -1,15 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import LogoIcon from "../../atoms/LogoIcon";
 import Logo from "../../atoms/Logo";
 import Icon from "../../atoms/Icon";
 import HamburgerMenu from "../../atoms/HamburgerMenu/HamburgerMenu";
 import { Link } from "react-router-dom";
+import CartContext from "../../../contexts";
 /// TODO: Define props
 const NavigationBar = (props) => {
   const classes = ["NavigationBar", ...(props.additionalClasses || [])].join(
     " "
   );
+  const { items } = useContext(CartContext);
 
   return (
     <div data-testid={props.testID} className={classes}>
@@ -38,7 +40,7 @@ const NavigationBar = (props) => {
               "main-text-bold-12",
             ]}
             type="item-count"
-            textValue={3}
+            textValue={items.length}
           />
         </Link>
 
