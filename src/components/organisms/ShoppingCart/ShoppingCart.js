@@ -1,18 +1,23 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import Item from "../../molecules/Item/Item";
 import ItemTotal from "../../molecules/ItemTotal/ItemTotal";
 import Label from "../../atoms/Label/Label";
 import CallToAction from "../../molecules/CallToAction/CallToAction";
-
+import CartContext from "../../../contexts";
 /// TODO: Define props
 const ShoppingCart = (props) => {
+  const { items } = useContext(CartContext);
+
+  console.log(items);
   return (
     <div data-testid={props.testID} className={"ShoppingCart"}>
       <Label
         text={"shopping cart"}
         additionalClasses={["h2", "fg-highlight-dark-50", "padding-block-xs"]}
       />
+
+      <div>{items.length}</div>
       <Item
         additionalClasses={[
           "flex",

@@ -1,12 +1,14 @@
-import { useState, useEffect } from "react";
+import { useContext } from "react";
 import PropTypes from "prop-types";
 import Label from "../../atoms/Label/Label";
 import CallToAction from "../CallToAction/CallToAction";
 import Button from "../../atoms/Button/Button";
 import { Link } from "react-router-dom";
+import CartContext from "../../../contexts";
 
 /// TODO: Define props
 const HeroTextContent = (props) => {
+  const { addToCart } = useContext(CartContext);
   return (
     <div data-testid={props.testID} className={`HeroTextContent `}>
       <Label
@@ -25,7 +27,7 @@ const HeroTextContent = (props) => {
         additionalClasses={["fg-highlight", "main-text-bold-12"]}
       />
       <div className="flex justify-content-space-between align-items-center margin-block-s">
-        <Link to={"/shoppingcart"}>
+        <Link to={"/shoppingcart"} onClick={() => addToCart(props.data)}>
           <CallToAction
             additionalClasses={["align-items-center", "padding-xs"]}
             colorPalette={"dark"}

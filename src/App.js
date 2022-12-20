@@ -2,6 +2,7 @@ import "./resources/styles/main.css";
 import { useDatabase } from "./hooks";
 
 import { Routes, Route, Link } from "react-router-dom";
+import { CartProvider } from "./contexts";
 
 import Navigation from "./components/organisms/Navigation/Navigation";
 import Detail from "./components/pages/Detail/Detail";
@@ -14,16 +15,18 @@ const App = () => {
 
   return (
     <div>
-      <Navigation />
-      <Routes>
-        <Route path="/" element={<Home data={isLoaded ? data : ""} />} />
-        <Route
-          path="/detail/:type"
-          element={<Detail data={isLoaded ? data : ""} />}
-        />
-        <Route path="/shoppingcart" element={<ShoppingCart />} />
-      </Routes>
-      <Footer additionalClasses={["bg-highlight-dark-50"]} />
+      <CartProvider>
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<Home data={isLoaded ? data : ""} />} />
+          <Route
+            path="/detail/:type"
+            element={<Detail data={isLoaded ? data : ""} />}
+          />
+          <Route path="/shoppingcart" element={<ShoppingCart />} />
+        </Routes>
+        <Footer additionalClasses={["bg-highlight-dark-50"]} />
+      </CartProvider>
     </div>
   );
 };

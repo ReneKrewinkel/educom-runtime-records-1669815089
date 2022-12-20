@@ -1,14 +1,16 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import Price from "../../atoms/Price/Price";
 import Image from "../../atoms/Image/Image";
 import Label from "../../atoms/Label/Label";
 import Icon from "../../atoms/Icon";
 import { Link } from "react-router-dom";
+import CartContext from "../../../contexts";
 /// TODO: Define props
 const Card = (props) => {
   const classes = ["Card", ...(props.additionalClasses || [])].join(" ");
 
+  const { addToCart } = useContext(CartContext);
   return (
     <div
       data-testid={props.testID}
@@ -63,6 +65,7 @@ const Card = (props) => {
             to={"/shoppingcart"}
             data-object-type="hover-container"
             className="flex align-items-center"
+            onClick={() => addToCart(props.product)}
           >
             <Label
               text="add"
