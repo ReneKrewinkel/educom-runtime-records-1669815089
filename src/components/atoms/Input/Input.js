@@ -1,8 +1,13 @@
-import { useState, useEffect } from "react";
+import { useContext } from "react";
 import PropTypes from "prop-types";
-
+import { SearchContext } from "../../../contexts";
 const Input = (props) => {
   const classes = ["Input", ...(props.additionalClasses || [])].join(" ");
+
+  const { setSearchValue } = useContext(SearchContext);
+  const handleChange = (e) => {
+    setSearchValue(e.target.value);
+  };
 
   return (
     <div data-testid={props.testID}>
@@ -10,6 +15,7 @@ const Input = (props) => {
         className={classes}
         type="text"
         placeholder={props.placeholder}
+        onChange={handleChange}
       ></input>
     </div>
   );

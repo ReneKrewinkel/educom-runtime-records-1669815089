@@ -5,6 +5,11 @@ export const MenuContext = React.createContext({
   setIsActive: () => {},
 });
 
+export const SearchContext = React.createContext({
+  searchValue: "",
+  setSearchValue: () => {},
+});
+
 const CartContext = createContext();
 
 export function CartProvider({ children }) {
