@@ -8,7 +8,10 @@ import CartContext from "../../../contexts";
 /// TODO: Define props
 const ShoppingCart = (props) => {
   const { items } = useContext(CartContext);
-
+  const itemTotal = items.reduce(
+    (total, currenValue) => (total = total + currenValue.product.data.price),
+    0
+  );
   return (
     <div data-testid={props.testID} className={"ShoppingCart"}>
       <Label
@@ -34,6 +37,7 @@ const ShoppingCart = (props) => {
           "justify-content-space-between",
           "padding-block-m",
         ]}
+        amount={itemTotal}
       />
       <div className="CallToAction-container padding-block-s">
         <CallToAction

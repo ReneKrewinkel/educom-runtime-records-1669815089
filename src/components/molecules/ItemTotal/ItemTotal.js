@@ -15,7 +15,7 @@ const ItemTotal = (props) => {
       />
       <Price
         size={"large"}
-        amount={22.5}
+        amount={props.amount}
         additionalClasses={[
           "fg-highlight-light-50",
           " bg-highlight ",
@@ -29,6 +29,7 @@ const ItemTotal = (props) => {
 ItemTotal.propTypes = {
   testID: PropTypes.string,
   additionalClasses: PropTypes.array,
+  amount: PropTypes.number,
 };
 
 export default ItemTotal;

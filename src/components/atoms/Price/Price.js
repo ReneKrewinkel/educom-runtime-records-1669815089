@@ -19,7 +19,7 @@ const Price = (props) => {
     centsSize = "main-text-bold-16";
   } else {
     euroSize = "main-text-bold-34";
-    centsSize = "main-text-bold-28";
+    centsSize = "main-text-bold-22";
   }
 
   const classes = ["Price", ...(props.additionalClasses || [])].join(" ");

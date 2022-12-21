@@ -1,19 +1,26 @@
-import { useState, useEffect } from "react";
+import { useContext } from "react";
 import PropTypes from "prop-types";
 import Image from "../../atoms/Image/Image";
 import Label from "../../atoms/Label/Label";
 import Price from "../../atoms/Price/Price";
 import Icon from "../../atoms/Icon";
-
+import { Link } from "react-router-dom";
+import CartContext from "../../../contexts";
 /// TODO: Define props
 const Item = (props) => {
   const classes = ["Item", ...(props.additionalClasses || [])].join(" ");
   const item = props.data.product;
+  const { removeFromCart } = useContext(CartContext);
+
   return (
     <div data-testid={props.testID} className={classes}>
       <div className="flex align-items-center">
-        <Image type={"rounded"} file={item.data.file_name} size={"small"} />
-
+        <Link
+          to={`/detail/${props.data.product.data.title}`}
+          state={{ product: props.data.product }}
+        >
+          <Image type={"rounded"} file={item.data.file_name} size={"small"} />
+        </Link>
         <div className="ellipsis-container">
           <div>
             <Label
@@ -41,16 +48,18 @@ const Item = (props) => {
             "default-box-shadow",
           ]}
         />
-        <Icon
-          additionalClasses={[
-            "fg-highlight-dark-50",
-            "padding-xs",
-            "main-text-regular-16",
-            "margin-inline-xs",
-          ]}
-          type={"circle-icon"}
-          iconValue={["fa", "trash"]}
-        />
+        <div onClick={() => removeFromCart(item.id)}>
+          <Icon
+            additionalClasses={[
+              "fg-highlight-dark-50",
+              "padding-xs",
+              "main-text-regular-16",
+              "margin-inline-xs",
+            ]}
+            type={"circle-icon"}
+            iconValue={["fa", "trash"]}
+          />
+        </div>
       </div>
     </div>
   );

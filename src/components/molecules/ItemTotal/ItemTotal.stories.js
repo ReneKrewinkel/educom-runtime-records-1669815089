@@ -7,6 +7,7 @@ const ItemTotalMeta = {
   argTypes: {
     testID: { table: { disable: true } },
     additionalClasses: { name: "AdditionalClasses" },
+    amount: { name: "Amount" },
   },
 };
 
@@ -21,6 +22,7 @@ DefaultItemTotal.args = {
     "align-items-center",
     "justify-content-space-between",
   ],
+  amount: 22.5,
 };
 
 export default ItemTotalMeta;
