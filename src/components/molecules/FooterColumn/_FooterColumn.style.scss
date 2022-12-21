@@ -6,6 +6,11 @@
     .heading {
       display: flex;
       align-items: center;
+      margin-bottom: 2rem;
+
+      .Label {
+        margin-bottom: 0;
+      }
     }
   }
 

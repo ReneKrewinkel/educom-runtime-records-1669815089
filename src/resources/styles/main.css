@@ -764,6 +764,10 @@ select {
 .FooterColumn[data-object-type=text] .heading {
   display: flex;
   align-items: center;
+  margin-bottom: 2rem;
+}
+.FooterColumn[data-object-type=text] .heading .Label {
+  margin-bottom: 0;
 }
 .FooterColumn[data-object-type=images] {
   gap: 0.5rem;
@@ -865,13 +869,37 @@ select {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 .Footer {
-  padding: 2rem 8rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  padding: 4rem 6rem;
 }
 .Footer .FooterColumn[data-object-type=images] {
   justify-content: flex-end;
 }
+@media (max-width: 420px) {
+  .Footer {
+    padding: 4rem 2.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .Footer {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 700px) and (max-width: 1024px) {
+  .Footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 1024px) {
+  .Footer {
+    grid-gap: 3rem;
+  }
+  .Footer .FooterColumn[data-object-type=images] {
+    justify-content: flex-start;
+  }
+}
+
 .Hero {
   min-height: 100vh;
   display: flex;

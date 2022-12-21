@@ -1,28 +1,30 @@
 .Footer {
-  padding: 2rem 8rem;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  padding: 4rem 6rem;
 
   .FooterColumn[data-object-type="images"] {
     justify-content: flex-end;
   }
   // XS - Phone
-  @media (max-width: 480px) {
+  @media (max-width: 420px) {
+    padding: 4rem 2.5rem;
   }
 
   // S - Tablet
   @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 700px) and (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
   }
 
   // M - Tablet/Laptop
   @media (max-width: 1024px) {
-  }
-
-  // L - High Res
-  @media (max-width: 1200px) {
-  }
-
-  // XL - Ultra High Res
-  @media (min-width: 1201px) {
+    grid-gap: 3rem;
+    .FooterColumn[data-object-type="images"] {
+      justify-content: flex-start;
+    }
   }
 }

@@ -18,8 +18,9 @@ const ShoppingCart = (props) => {
         text={"shopping cart"}
         additionalClasses={["h2", "fg-highlight-dark-50", "padding-block-xs"]}
       />
-      {items.map((item) => (
+      {items.map((item, index) => (
         <Item
+          key={index}
           additionalClasses={[
             "flex",
             "align-items-center",
