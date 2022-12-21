@@ -136,12 +136,12 @@ select {
   --main-text-link: "main-text-link";
   /** PADDING **/
   --padding-xs: 0.5em;
-  --padding-s: 1em;
+  --padding-s: 1.5em;
   --padding-m: 2em;
   --padding-l: 3em;
   /** MARGINS **/
   --margin-xs: 0.5rem;
-  --margin-s: 1rem;
+  --margin-s: 1.5rem;
   --margin-m: 2rem;
   --margin-l: 3rem;
   /** BOX SHADOW **/
@@ -651,7 +651,7 @@ select {
   position: relative;
   display: grid;
   line-height: 1.2;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 .Card .ellipsis-container {
   white-space: nowrap;
@@ -866,7 +866,31 @@ select {
 .CardGrid {
   display: grid;
   margin-inline: 6rem;
+  grid-gap: 2.5rem;
   grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+@media (max-width: 420px) {
+  .CardGrid {
+    margin-inline: 2.5rem;
+  }
+}
+@media (max-width: 668px) {
+  .CardGrid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .CardGrid .Card {
+    margin-bottom: 0.5rem;
+  }
+}
+@media (min-width: 668px) and (max-width: 1024px) {
+  .CardGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1024px) and (max-width: 1200px) {
+  .CardGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 .Footer {
   display: grid;

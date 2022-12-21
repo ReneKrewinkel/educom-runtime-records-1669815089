@@ -57,9 +57,11 @@ const Card = (props) => {
         <div className="flex justify-content-space-between align-items-center">
           <Label
             text={props.product.data.artist}
-            additionalClasses={
-              ("long-text", ["fg-base-light-50", "main-text-bold-16"])
-            }
+            additionalClasses={[
+              "long-text",
+              "fg-base-light-50",
+              "main-text-bold-16",
+            ]}
           />
           <Link
             to={"/shoppingcart"}

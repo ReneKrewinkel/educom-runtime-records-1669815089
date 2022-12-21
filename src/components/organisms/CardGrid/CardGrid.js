@@ -13,7 +13,7 @@ const CardGrid = (props) => {
             return (
               <Card
                 key={index}
-                additionalClasses={["margin-block-m", "margin-inline-s"]}
+                additionalClasses={["margin-block-m"]}
                 product={product}
               />
             );

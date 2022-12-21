@@ -24,7 +24,7 @@ const DetailInfo = (props) => {
       <p className="main-text-regular-16 fg-base-light-50 padding-block-s">
         {props.shortDescription}
       </p>
-      <p className="main-text-regular-16 fg-base-light-50 padding-block-s">
+      <p className="main-text-regular-16 fg-base-light-50 ">
         {props.longDescription}
       </p>
     </div>
