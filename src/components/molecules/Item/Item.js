@@ -14,31 +14,29 @@ const Item = (props) => {
 
   return (
     <div data-testid={props.testID} className={classes}>
-      <div className="flex align-items-center">
-        <Link
-          to={`/detail/${props.data.product.data.title}`}
-          state={{ product: props.data.product }}
-        >
-          <Image type={"rounded"} file={item.data.file_name} size={"small"} />
-        </Link>
-        <div className="ellipsis-container">
-          <div>
-            <Label
-              text={item.data.title}
-              additionalClasses={["long-text", "fg-highlight-dark-50", "h4"]}
-            />
-            <Label
-              text={item.data.artist}
-              additionalClasses={[
-                "long-text",
-                "fg-base-light-50",
-                "main-text-bold-16",
-              ]}
-            />
-          </div>
+      <Link
+        to={`/detail/${props.data.product.data.title}`}
+        state={{ product: props.data.product }}
+      >
+        <Image type={"rounded"} file={item.data.file_name} size={"small"} />
+      </Link>
+      <div className="ellipsis-container">
+        <div>
+          <Label
+            text={item.data.title}
+            additionalClasses={["long-text", "fg-highlight-dark-50", "h4"]}
+          />
+          <Label
+            text={item.data.artist}
+            additionalClasses={[
+              "long-text",
+              "fg-base-light-50",
+              "main-text-bold-16",
+            ]}
+          />
         </div>
       </div>
-      <div className="flex align-items-center">
+      <div className="flex align-items-center price-container">
         <Price
           size={"medium"}
           amount={item.data.price}

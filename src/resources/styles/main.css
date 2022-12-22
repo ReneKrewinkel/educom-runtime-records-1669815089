@@ -741,6 +741,8 @@ select {
 
 .Item {
   border-bottom: solid 2px var(--fg-highlight-dark-50);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
 }
 .Item .Icon {
   transition: all 300ms ease-in-out;
@@ -1041,6 +1043,50 @@ select {
 .ShoppingCart .CallToAction-container {
   display: flex;
   justify-content: flex-end;
+}
+
+@media (max-width: 480px) {
+  .ShoppingCart .h2 {
+    font-size: 34px;
+  }
+  .ShoppingCart .Item {
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+  }
+  .ShoppingCart .Item .ellipsis-container {
+    order: 2;
+    grid-column: span 2;
+    margin: 0;
+  }
+  .ShoppingCart .Item .price-container {
+    justify-content: flex-end;
+  }
+  .ShoppingCart .ItemTotal .Label {
+    font-size: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .ShoppingCart .ItemTotal .euro {
+    font-size: 28px;
+  }
+  .ShoppingCart .ItemTotal .cents {
+    font-size: 16px;
+  }
+  .ShoppingCart .ItemTotal .Label {
+    font-size: 32px;
+  }
+  .ShoppingCart .Item .Image {
+    max-width: 100px;
+  }
+  .ShoppingCart .Item .ellipsis-container .h4 {
+    font-size: 24px;
+  }
+  .ShoppingCart .Item .euro {
+    font-size: 20px;
+  }
+  .ShoppingCart .Item .cents {
+    font-size: 12px;
+  }
 }
 .DetailSection {
   display: grid;

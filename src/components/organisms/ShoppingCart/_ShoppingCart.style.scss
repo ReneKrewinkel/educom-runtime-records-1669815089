@@ -9,24 +9,60 @@
     display: flex;
     justify-content: flex-end;
   }
+}
 
-  // XS - Phone
-  @media (max-width: 480px) {
+// XS - Phone
+@media (max-width: 480px) {
+  .ShoppingCart {
+    .h2 {
+      font-size: 34px;
+    }
+    .Item {
+      grid-template-columns: auto 1fr;
+      gap: 1rem;
+      .ellipsis-container {
+        order: 2;
+        grid-column: span 2;
+        margin: 0;
+      }
+
+      .price-container {
+        justify-content: flex-end;
+      }
+    }
+    .ItemTotal .Label {
+      font-size: 24px;
+    }
   }
+}
 
-  // S - Tablet
-  @media (max-width: 768px) {
-  }
-
-  // M - Tablet/Laptop
-  @media (max-width: 1024px) {
-  }
-
-  // L - High Res
-  @media (max-width: 1200px) {
-  }
-
-  // XL - Ultra High Res
-  @media (min-width: 1201px) {
+// S - Tablet
+@media (max-width: 768px) {
+  .ShoppingCart {
+    .ItemTotal {
+      .euro {
+        font-size: 28px;
+      }
+      .cents {
+        font-size: 16px;
+      }
+      .Label {
+        font-size: 32px;
+      }
+    }
+    .Item {
+      .Image {
+        max-width: 100px;
+      }
+      .ellipsis-container .h4 {
+        font-size: 24px;
+      }
+      .euro {
+        font-size: 20px;
+      }
+      .cents {
+        font-size: 12px;
+      }
+    }
   }
 }
