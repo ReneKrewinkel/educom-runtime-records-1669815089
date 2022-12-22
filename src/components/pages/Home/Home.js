@@ -45,15 +45,18 @@ const Home = (props) => {
   ) : (
     <div data-testid={props.testID} className={"Home"}>
       <Hero data={props.data[0]} />
+
       <SearchContext.Provider value={value}>
-        <SearchBar additionalClasses={["margin-l"]} />
-        <CardGrid data={currentCards} cardsPerPage={cardsPerPage} />
-        <Pagination
-          cardsPerPage={cardsPerPage}
-          numberOfCards={filteredCards.length}
-          setPage={setPage}
-          currentPage={currentPage}
-        />
+        <div className="section-container">
+          <SearchBar additionalClasses={["margin-s"]} />
+          <CardGrid data={currentCards} cardsPerPage={cardsPerPage} />
+          <Pagination
+            cardsPerPage={cardsPerPage}
+            numberOfCards={filteredCards.length}
+            setPage={setPage}
+            currentPage={currentPage}
+          />
+        </div>
       </SearchContext.Provider>
     </div>
   );

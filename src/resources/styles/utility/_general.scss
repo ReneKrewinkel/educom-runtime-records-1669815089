@@ -5,3 +5,19 @@
 .line-height-1 {
   line-height: 1;
 }
+
+.section-container {
+  padding: 4rem 6rem;
+}
+
+@media (max-width: 420px) {
+  .section-container {
+    padding: 4rem 2.5rem;
+  }
+}
+
+@media (min-width: 420px) and(max-width:678px) {
+  .section-container {
+    padding: 4rem 4rem;
+  }
+}

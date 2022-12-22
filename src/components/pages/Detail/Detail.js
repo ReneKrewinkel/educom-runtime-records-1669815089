@@ -9,7 +9,7 @@ const Detail = (props) => {
   const product = useLocation().state.product;
 
   return (
-    <div data-testid={props.testID} className={"Detail"}>
+    <div data-testid={props.testID} className={"Detail section-container"}>
       <DetailSection data={product} />
       <CardGrid data={props.data.slice(0, 4)} />
     </div>

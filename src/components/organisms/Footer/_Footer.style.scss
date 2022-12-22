@@ -1,14 +1,9 @@
 .Footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 4rem 6rem;
 
   .FooterColumn[data-object-type="images"] {
     justify-content: flex-end;
-  }
-  // XS - Phone
-  @media (max-width: 420px) {
-    padding: 4rem 2.5rem;
   }
 
   // S - Tablet

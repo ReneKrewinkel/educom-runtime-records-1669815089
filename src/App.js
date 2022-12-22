@@ -14,7 +14,7 @@ const App = () => {
   const [data, isLoaded] = useDatabase("records");
 
   return (
-    <div>
+    <div className="App">
       <CartProvider>
         <Navigation />
         <Routes>
@@ -25,7 +25,9 @@ const App = () => {
           />
           <Route path="/shoppingcart" element={<ShoppingCart />} />
         </Routes>
-        <Footer additionalClasses={["bg-highlight-dark-50"]} />
+        <Footer
+          additionalClasses={["bg-highlight-dark-50", "section-container"]}
+        />
       </CartProvider>
     </div>
   );

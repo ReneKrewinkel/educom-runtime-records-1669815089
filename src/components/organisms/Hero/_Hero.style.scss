@@ -2,9 +2,8 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 4rem 6rem;
 
-  .inner-section {
+  .section-container {
     display: grid;
     margin: 0 auto;
     grid-template-columns: 1fr 1fr;
@@ -30,11 +29,6 @@
     }
   }
 
-  // XS - Phone
-  @media (max-width: 420px) {
-    padding-inline: 2.5rem;
-  }
-
   // S - Tablet
   @media (max-width: 768px) {
     .album-text-container .DetailImage {
@@ -44,7 +38,7 @@
 
   // M - Tablet/Laptop
   @media (max-width: 800px) {
-    .inner-section {
+    .section-container {
       grid-template-columns: 1fr;
     }
 

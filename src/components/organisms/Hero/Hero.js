@@ -19,7 +19,7 @@ const Hero = (props) => {
         backgroundPosition: "bottom",
       }}
     >
-      <div className="inner-section">
+      <div className="section-container">
         <HeroTextContent data={props.data} />
         <div className="DetailImage-container">
           <DetailImage exceptionType={"album-display"} data={props.data} />

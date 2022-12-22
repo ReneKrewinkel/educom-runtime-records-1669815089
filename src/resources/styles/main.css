@@ -470,6 +470,20 @@ select {
   line-height: 1;
 }
 
+.section-container {
+  padding: 4rem 6rem;
+}
+
+@media (max-width: 420px) {
+  .section-container {
+    padding: 4rem 2.5rem;
+  }
+}
+@media (min-width: 420px) and (max-width: 678px) {
+  .section-container {
+    padding: 4rem 4rem;
+  }
+}
 .h1 {
   font-family: "heading";
   font-size: 5.625rem;
@@ -913,14 +927,8 @@ select {
 /*! Organisms */
 .CardGrid {
   display: grid;
-  margin-inline: 6rem;
   grid-gap: 2.5rem;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-@media (max-width: 420px) {
-  .CardGrid {
-    margin-inline: 2.5rem;
-  }
 }
 @media (max-width: 668px) {
   .CardGrid {
@@ -944,15 +952,9 @@ select {
 .Footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 4rem 6rem;
 }
 .Footer .FooterColumn[data-object-type=images] {
   justify-content: flex-end;
-}
-@media (max-width: 420px) {
-  .Footer {
-    padding: 4rem 2.5rem;
-  }
 }
 @media (max-width: 768px) {
   .Footer {
@@ -977,35 +979,29 @@ select {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 4rem 6rem;
 }
-.Hero .inner-section {
+.Hero .section-container {
   display: grid;
   margin: 0 auto;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   grid-gap: 3rem;
 }
-.Hero .inner-section .DetailImage-container {
+.Hero .section-container .DetailImage-container {
   margin: 0 auto;
 }
-.Hero .inner-section .DetailImage {
+.Hero .section-container .DetailImage {
   max-width: 350px;
 }
-.Hero .inner-section .Price {
+.Hero .section-container .Price {
   z-index: 3;
 }
-.Hero .inner-section .Image {
+.Hero .section-container .Image {
   position: relative;
   z-index: 2;
 }
-.Hero .inner-section .Record {
+.Hero .section-container .Record {
   z-index: 1;
-}
-@media (max-width: 420px) {
-  .Hero {
-    padding-inline: 2.5rem;
-  }
 }
 @media (max-width: 768px) {
   .Hero .album-text-container .DetailImage {
@@ -1013,7 +1009,7 @@ select {
   }
 }
 @media (max-width: 800px) {
-  .Hero .inner-section {
+  .Hero .section-container {
     grid-template-columns: 1fr;
   }
   .Hero .DetailImage-container {
@@ -1051,7 +1047,6 @@ select {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2rem;
   margin: 0 auto;
-  padding: 4rem 6rem;
 }
 .DetailSection .DetailInfo-container {
   padding-block: 1.5rem;
@@ -1064,11 +1059,6 @@ select {
   justify-content: flex-end;
 }
 
-@media (max-width: 580px) {
-  .DetailSection {
-    padding-inline: 2.5rem;
-  }
-}
 @media (max-width: 1020px) {
   .DetailSection {
     grid-template-columns: 1fr;

@@ -13,7 +13,10 @@ const ShoppingCart = (props) => {
     0
   );
   return (
-    <div data-testid={props.testID} className={"ShoppingCart"}>
+    <div
+      data-testid={props.testID}
+      className={"ShoppingCart section-container"}
+    >
       <Label
         text={"shopping cart"}
         additionalClasses={["h2", "fg-highlight-dark-50", "padding-block-xs"]}
