@@ -34,7 +34,10 @@ const HeroTextContent = (props) => {
             type={"no-label"}
           />
         </Link>
-        <Link to="/detail">
+        <Link
+          to={`/detail/${props.data.data.title}`}
+          state={{ product: props.data }}
+        >
           <Button
             additionalClasses={[
               "bg-highlight",

@@ -4,7 +4,7 @@
   gap: 2rem;
 
   margin: 0 auto;
-  padding: 4rem 8rem;
+  padding: 4rem 6rem;
 
   .DetailInfo-container {
     padding-block: 1.5rem;
@@ -15,5 +15,19 @@
     display: grid;
     margin-top: 1rem;
     justify-content: flex-end;
+  }
+}
+@media (max-width: 580px) {
+  .DetailSection {
+    padding-inline: 2.5rem;
+  }
+}
+@media (max-width: 1020px) {
+  .DetailSection {
+    grid-template-columns: 1fr;
+
+    .DetailImage {
+      margin: 0;
+    }
   }
 }
