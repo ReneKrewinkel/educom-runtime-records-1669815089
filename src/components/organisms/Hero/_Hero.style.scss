@@ -2,43 +2,55 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
+  padding: 4rem 6rem;
+
   .inner-section {
     display: grid;
     margin: 0 auto;
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    max-width: 80%;
+    grid-gap: 3rem;
 
     .DetailImage-container {
       margin: 0 auto;
+    }
+    .DetailImage {
+      max-width: 350px;
+    }
 
-      .DetailImage {
-        max-width: 350px;
-      }
-
-      .Price {
-        z-index: 3;
-      }
-      .Image {
-        position: relative;
-        z-index: 2;
-      }
-      .Record {
-        z-index: 1;
-      }
+    .Price {
+      z-index: 3;
+    }
+    .Image {
+      position: relative;
+      z-index: 2;
+    }
+    .Record {
+      z-index: 1;
     }
   }
 
   // XS - Phone
-  @media (max-width: 480px) {
+  @media (max-width: 420px) {
+    padding-inline: 2.5rem;
   }
 
   // S - Tablet
   @media (max-width: 768px) {
+    .album-text-container .DetailImage {
+      display: none;
+    }
   }
 
   // M - Tablet/Laptop
-  @media (max-width: 1024px) {
+  @media (max-width: 800px) {
+    .inner-section {
+      grid-template-columns: 1fr;
+    }
+
+    .DetailImage-container {
+      max-width: 80%;
+    }
   }
 
   // L - High Res
@@ -47,5 +59,8 @@
 
   // XL - Ultra High Res
   @media (min-width: 1201px) {
+    .inner-section {
+      max-width: 80%;
+    }
   }
 }

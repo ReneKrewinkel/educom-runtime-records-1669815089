@@ -558,7 +558,7 @@ select {
 }
 
 .Button {
-  border-radius: 25px;
+  border-radius: 50px;
   border: none;
   padding: 0.8rem 1.5rem;
   letter-spacing: 1px;
@@ -892,6 +892,7 @@ select {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
 .Footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -928,30 +929,55 @@ select {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  padding: 4rem 6rem;
 }
 .Hero .inner-section {
   display: grid;
   margin: 0 auto;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  max-width: 80%;
+  grid-gap: 3rem;
 }
 .Hero .inner-section .DetailImage-container {
   margin: 0 auto;
 }
-.Hero .inner-section .DetailImage-container .DetailImage {
+.Hero .inner-section .DetailImage {
   max-width: 350px;
 }
-.Hero .inner-section .DetailImage-container .Price {
+.Hero .inner-section .Price {
   z-index: 3;
 }
-.Hero .inner-section .DetailImage-container .Image {
+.Hero .inner-section .Image {
   position: relative;
   z-index: 2;
 }
-.Hero .inner-section .DetailImage-container .Record {
+.Hero .inner-section .Record {
   z-index: 1;
 }
+@media (max-width: 420px) {
+  .Hero {
+    padding-inline: 2.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .Hero .album-text-container .DetailImage {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .Hero .inner-section {
+    grid-template-columns: 1fr;
+  }
+  .Hero .DetailImage-container {
+    max-width: 80%;
+  }
+}
+@media (min-width: 1201px) {
+  .Hero .inner-section {
+    max-width: 80%;
+  }
+}
+
 .Navigation .HamburgerMenu,
 .Navigation .Icon {
   cursor: pointer;
