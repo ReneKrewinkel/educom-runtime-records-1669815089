@@ -643,6 +643,9 @@ select {
 }
 
 /*! Molecules */
+.NavigationBar {
+  gap: 3rem;
+}
 .NavigationBar [data-object-type=shoppingcart-icon] {
   position: relative;
 }
@@ -848,7 +851,7 @@ select {
 }
 .PopoutMenu ul {
   max-width: 700px;
-  margin: 0 auto;
+  margin: 4rem auto;
 }
 .PopoutMenu ul li .nav-item {
   width: 100%;
@@ -872,6 +875,27 @@ select {
   opacity: 1;
 }
 
+@media (max-width: 420px) {
+  .PopoutMenu ul {
+    max-width: 90%;
+  }
+}
+@media (min-width: 420px) and (max-width: 768px) {
+  .PopoutMenu ul {
+    max-width: 70%;
+  }
+}
+@media (max-width: 768px) {
+  .PopoutMenu li {
+    font-size: 48px;
+  }
+  .PopoutMenu li .Icon {
+    font-size: 24px;
+  }
+  .PopoutMenu li a {
+    font-size: 34px;
+  }
+}
 .Pagination ul {
   text-align: center;
   padding-bottom: 2rem;
@@ -1005,6 +1029,11 @@ select {
 .Navigation .HamburgerMenu,
 .Navigation .Icon {
   cursor: pointer;
+}
+@media (max-width: 480px) {
+  .Navigation .NavigationBar .Logo {
+    display: none;
+  }
 }
 
 .ShoppingCart {

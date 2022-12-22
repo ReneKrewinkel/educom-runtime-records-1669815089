@@ -21,7 +21,7 @@
   }
   ul {
     max-width: 700px;
-    margin: 0 auto;
+    margin: 4rem auto;
 
     li {
       .nav-item {
@@ -48,6 +48,34 @@
         .Icon {
           opacity: 1;
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .PopoutMenu ul {
+    max-width: 90%;
+  }
+}
+@media (min-width: 420px) and (max-width: 768px) {
+  .PopoutMenu {
+    ul {
+      max-width: 70%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .PopoutMenu {
+    li {
+      font-size: 48px;
+
+      .Icon {
+        font-size: 24px;
+      }
+      a {
+        font-size: 34px;
       }
     }
   }

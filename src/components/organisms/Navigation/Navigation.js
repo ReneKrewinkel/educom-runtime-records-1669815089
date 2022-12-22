@@ -13,7 +13,7 @@ const Navigation = (props) => {
       <MenuContext.Provider value={value}>
         <NavigationBar
           additionalClasses={[
-            "padding-inline-m",
+            "padding-inline-l",
             "padding-block-xs",
             "flex",
             "justify-content-space-between",
@@ -21,7 +21,7 @@ const Navigation = (props) => {
         />
         <PopoutMenu
           menuItems={["shop", "account", "info", "contact"]}
-          additionalClasses={["padding-inline-m", "padding-block-xs"]}
+          additionalClasses={["padding-inline-l", "padding-block-xs"]}
         />
       </MenuContext.Provider>
     </div>

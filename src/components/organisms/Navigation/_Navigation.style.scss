@@ -3,4 +3,10 @@
   .Icon {
     cursor: pointer;
   }
+
+  @media (max-width: 480px) {
+    .NavigationBar .Logo {
+      display: none;
+    }
+  }
 }

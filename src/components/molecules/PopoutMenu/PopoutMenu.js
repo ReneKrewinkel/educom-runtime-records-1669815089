@@ -19,58 +19,69 @@ const PopoutMenu = (props) => {
       className={classes}
       data-object-type={isActive ? "isActive" : ""}
     >
-      <Container fluid>
-        <div className="flex justify-content-space-between">
+      <div className="flex justify-content-space-between">
+        <Link
+          to="/"
+          onClick={function () {
+            isActive === true ? setIsActive(false) : setIsActive(true);
+          }}
+        >
           <LogoIcon size="small" type="logo-icon-black" />
-          <div className=" flex align-items-center gap-m">
-            <Link to="/shoppingcart" data-object-type="shoppingcart-icon">
-              <Icon
-                additionalClasses={[
-                  "bg-highlight-dark-50",
-                  "fg-highlight-light-50",
-                  "padding-xs",
-                  "main-text-regular-22",
-                ]}
-                iconValue={["fa", "shopping-cart"]}
-                type="circle-icon"
-              />
-              <Icon
-                additionalClasses={[
-                  "bg-highlight",
-                  "fg-highlight-light-50",
-                  "padding-xs",
-                  "main-text-bold-12",
-                ]}
-                type="item-count"
-                textValue={items.length}
-              />
-            </Link>
-            <HamburgerMenu type="menu-open" />
-          </div>
+        </Link>
+        <div className=" flex align-items-center gap-m">
+          <Link
+            to="/shoppingcart"
+            data-object-type="shoppingcart-icon"
+            onClick={function () {
+              isActive === true ? setIsActive(false) : setIsActive(true);
+            }}
+          >
+            <Icon
+              additionalClasses={[
+                "bg-highlight-dark-50",
+                "fg-highlight-light-50",
+                "padding-xs",
+                "main-text-regular-22",
+              ]}
+              iconValue={["fa", "shopping-cart"]}
+              type="circle-icon"
+            />
+            <Icon
+              additionalClasses={[
+                "bg-highlight",
+                "fg-highlight-light-50",
+                "padding-xs",
+                "main-text-bold-12",
+              ]}
+              type="item-count"
+              textValue={items.length}
+            />
+          </Link>
+          <HamburgerMenu type="menu-open" />
         </div>
-        <ul>
-          {props.menuItems.map((item, index) => {
-            return (
-              <li className="h1 flex align-items-center" key={index}>
-                <Icon
-                  additionalClasses={[
-                    "fg-highlight-dark-50",
-                    "padding-inline-xs",
-                    "main-text-regular-34",
-                  ]}
-                  iconValue={["fa", "arrow-right"]}
-                  type={"default-icon"}
-                />
-                <div className="nav-item">
-                  <a className="fg-highlight-dark-50" href="#">
-                    {item}
-                  </a>
-                </div>
-              </li>
-            );
-          })}
-        </ul>
-      </Container>
+      </div>
+      <ul>
+        {props.menuItems.map((item, index) => {
+          return (
+            <li className="h1 flex align-items-center" key={index}>
+              <Icon
+                additionalClasses={[
+                  "fg-highlight-dark-50",
+                  "padding-inline-xs",
+                  "main-text-regular-34",
+                ]}
+                iconValue={["fa", "arrow-right"]}
+                type={"default-icon"}
+              />
+              <div className="nav-item">
+                <a className="fg-highlight-dark-50" href="#">
+                  {item}
+                </a>
+              </div>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 };
