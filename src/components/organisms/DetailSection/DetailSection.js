@@ -12,11 +12,7 @@ const DetailSection = (props) => {
 
   return (
     <div data-testid={props.testID} className={"DetailSection"}>
-      <DetailImage
-        additionalClasses={["margin-s"]}
-        exceptionType={""}
-        data={props.data}
-      />
+      <DetailImage exceptionType={""} data={props.data} />
       <div className="DetailInfo-container">
         <DetailInfo
           title={props.data.data.title}
@@ -25,6 +21,26 @@ const DetailSection = (props) => {
           shortDescription={props.data.data.short_description}
           longDescription={props.data.data.long_description}
         />
+        <Link
+          to="/shoppingcart"
+          className="CallToAction-container"
+          onClick={() => addToCart(props.data)}
+        >
+          <CallToAction
+            additionalClasses={["align-items-center", "padding-xs"]}
+            labelValue={"add to cart"}
+            colorPalette={"highlight"}
+            type={"regular"}
+          />
+        </Link>
+      </div>
+      <div className="responsive-s-container">
+        <p className="main-text-regular-16 fg-base-light-50 padding-block-s">
+          {props.data.data.short_description}
+        </p>
+        <p className=" main-text-regular-16 fg-base-light-50">
+          {props.data.data.long_description}
+        </p>
         <Link
           to="/shoppingcart"
           className="CallToAction-container"
