@@ -8,6 +8,8 @@ export const MenuContext = React.createContext({
 export const SearchContext = React.createContext({
   searchValue: "",
   setSearchValue: () => {},
+  currentPage: 1,
+  setCurrentPage: () => {},
 });
 
 const CartContext = createContext();

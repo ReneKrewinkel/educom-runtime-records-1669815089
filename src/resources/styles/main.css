@@ -588,6 +588,7 @@ select {
 }
 
 .Image {
+  height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -678,6 +679,7 @@ select {
   text-overflow: ellipsis;
 }
 .Card [data-object-type=hover-container] {
+  text-decoration: none;
   line-height: 0px;
   cursor: pointer;
 }
@@ -1103,6 +1105,7 @@ select {
   display: grid;
   margin-top: 1rem;
   justify-content: flex-end;
+  text-decoration: none;
 }
 .DetailSection .responsive-s-container {
   display: none;

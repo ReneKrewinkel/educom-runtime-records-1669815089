@@ -4,9 +4,10 @@ import { SearchContext } from "../../../contexts";
 const Input = (props) => {
   const classes = ["Input", ...(props.additionalClasses || [])].join(" ");
 
-  const { setSearchValue } = useContext(SearchContext);
+  const { setSearchValue, setCurrentPage } = useContext(SearchContext);
   const handleChange = (e) => {
     setSearchValue(e.target.value);
+    setCurrentPage(1);
   };
 
   return (

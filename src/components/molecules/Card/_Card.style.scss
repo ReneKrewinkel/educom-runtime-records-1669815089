@@ -13,6 +13,8 @@
     text-overflow: ellipsis;
   }
   [data-object-type="hover-container"] {
+    text-decoration: none;
+
     line-height: 0px;
     cursor: pointer;
     .hover-right,
@@ -22,6 +24,7 @@
       -webkit-transition: all 300ms ease-in-out; /* Safari and Chrome */
       -o-transition: all 300ms ease-in-out; /* Opera */
     }
+
     .hover-right {
       padding-right: 0.5rem;
     }

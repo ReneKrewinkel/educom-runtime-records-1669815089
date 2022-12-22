@@ -9,7 +9,9 @@ import { SearchContext } from "../../../contexts";
 const Home = (props) => {
   // filter data based on search
   const [searchValue, setSearchValue] = useState("");
-  const value = { searchValue, setSearchValue };
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const value = { searchValue, setSearchValue, setCurrentPage };
 
   let filteredCards = props.data;
   if (props.data !== "") {
@@ -34,7 +36,7 @@ const Home = (props) => {
   };
 
   // displaying only a portion of the data per page
-  const [currentPage, setCurrentPage] = useState(1);
+
   const cardsPerPage = 8;
   const indexOfLastCard = currentPage * cardsPerPage;
   const indexOfFirstCard = indexOfLastCard - cardsPerPage;
