@@ -1,8 +1,9 @@
 .SearchBar {
+  display: flex;
   justify-content: center;
+
   form {
     position: relative;
-    margin-right: 4rem;
   }
 
   button {
@@ -12,5 +13,33 @@
     background-color: transparent;
     border: none;
     height: 100%;
+  }
+
+  @media (max-width: 420px) {
+    form .Input {
+      font-size: 16px;
+    }
+
+    button .LogoIcon {
+      width: 2rem;
+    }
+  }
+  @media (min-width: 420px) and(max-width: 650px) {
+    form .Input {
+      font-size: 24px;
+    }
+
+    button .LogoIcon {
+      width: 2.5rem;
+    }
+  }
+
+  @media (min-width: 650px) and (max-width: 800px) {
+    form .Input {
+      font-size: 34px;
+    }
+    button .LogoIcon {
+      width: 3.5rem;
+    }
   }
 }

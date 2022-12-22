@@ -46,9 +46,7 @@ const Home = (props) => {
     <div data-testid={props.testID} className={"Home"}>
       <Hero data={props.data[0]} />
       <SearchContext.Provider value={value}>
-        <SearchBar
-          additionalClasses={["flex", "align-items-center", "margin-block-l"]}
-        />
+        <SearchBar additionalClasses={["margin-l"]} />
         <CardGrid data={currentCards} cardsPerPage={cardsPerPage} />
         <Pagination
           cardsPerPage={cardsPerPage}

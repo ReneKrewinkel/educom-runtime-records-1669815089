@@ -683,11 +683,11 @@ select {
 }
 
 .SearchBar {
+  display: flex;
   justify-content: center;
 }
 .SearchBar form {
   position: relative;
-  margin-right: 4rem;
 }
 .SearchBar button {
   position: absolute;
@@ -696,6 +696,30 @@ select {
   background-color: transparent;
   border: none;
   height: 100%;
+}
+@media (max-width: 420px) {
+  .SearchBar form .Input {
+    font-size: 16px;
+  }
+  .SearchBar button .LogoIcon {
+    width: 2rem;
+  }
+}
+@media (min-width: 420px) and (max-width: 650px) {
+  .SearchBar form .Input {
+    font-size: 24px;
+  }
+  .SearchBar button .LogoIcon {
+    width: 2.5rem;
+  }
+}
+@media (min-width: 650px) and (max-width: 800px) {
+  .SearchBar form .Input {
+    font-size: 34px;
+  }
+  .SearchBar button .LogoIcon {
+    width: 3.5rem;
+  }
 }
 
 .Item {

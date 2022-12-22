@@ -14,7 +14,11 @@ const SearchBar = (props) => {
       data-object-type={props.type ?? ""}
       className={classes}
     >
-      <form>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+        }}
+      >
         <Input
           additionalClasses={["light-box-shadow", "main-text-bold-50"]}
           placeholder={"search"}
@@ -27,31 +31,6 @@ const SearchBar = (props) => {
           />
         </button>
       </form>
-      <div>
-        <Icon
-          additionalClasses={[
-            "bg-highlight-dark-50",
-            "fg-highlight-light-50",
-            "padding-xs",
-            "main-text-regular-24",
-            "margin-inline-xs",
-          ]}
-          iconValue={["fab", "spotify"]}
-          type={"circle-icon"}
-        />
-
-        <Icon
-          additionalClasses={[
-            "bg-highlight-dark-50",
-            "fg-highlight-light-50",
-            "padding-xs",
-            "main-text-regular-24",
-            "margin-inline-xs",
-          ]}
-          iconValue={["fa", "floppy-disk"]}
-          type={"circle-icon"}
-        />
-      </div>
     </div>
   );
 };

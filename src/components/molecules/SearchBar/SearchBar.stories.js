@@ -16,7 +16,7 @@ const Template = (args) => <SearchBar {...args} />;
 export const DefaultSearchBar = Template.bind({});
 DefaultSearchBar.args = {
   testID: testID,
-  additionalClasses: ["flex", "align-items-center"],
+  additionalClasses: [],
 };
 
 export default SearchBarMeta;
